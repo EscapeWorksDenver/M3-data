@@ -1,0 +1,783 @@
+<story>
+	<id>BB</id>
+	<name>Blackbeards Brig</name>
+	<description>You are privateers making your fortune on the high seas. You have been given a Letter of Marque from the King to capture the notorious pirate, Edward Teach, also known as Blackbeard, to seize his ship and all his stolen treasure. But when you finally track Blackbeard down, things do not go as planned - rather than capturing him, you're the ones locked in the brig! You have one hour to escape the brig, take over the ship, sail to safety, and grab Blackbeard's treasure before he returns to make you walk the plank.</description>
+	<active>true</active>
+	<type>Standard</type>
+	<color>0 0 0 255</color>
+	<scoring>Time</scoring>
+	<timebonus>0</timebonus>
+	<duration>60</duration>
+	<players>15</players>
+	<difficulty>1</difficulty>
+	<teamname>Investigators</teamname>
+	<chime ontext="true" onimage="true" onaudio="false" onvideo="false">sound/drums.mp3</chime>
+	<audioducking>false</audioducking>
+	<externalid />
+	<marquee>stories/BB/m3-marquee.jpg</marquee>
+	<poster>stories/BB/m3-poster.jpg</poster>
+	<styleinfo>
+		<base>adventure</base>
+		<basecolor>0 0 0 255</basecolor>
+		<orientation>1</orientation>
+		<background>stories/BB/shutterstock_334851452.jpg</background>
+		<backgroundlinkedtotimer>false</backgroundlinkedtotimer>
+		<clueicon>stories/BB/blackbeard 2.jpg</clueicon>
+		<clueusedicon>stories/BB/blackbeard 2.jpg</clueusedicon>
+		<timer hidewhenidle="false" hidewhenzero="false" font="Black Chancery" fontbold="false" fontitalic="false" fontshadow="true" left="400" top="50" size="250" color="255 255 255 255" override="true" visible="true" />
+		<messages font="Black Chancery" fontbold="false" fontitalic="false" fontshadow="false" left="0" top="0" size="40" color="255 255 255 255" override="false" visible="true" />
+		<clues left="0" top="0" override="false" visible="true" />
+		<customcss />
+		<customhtml />
+	</styleinfo>
+	<prologue>false</prologue>
+	<epilogue>false</epilogue>
+	<sound-levels>
+		<level id="Master" base="1" level="1" mute="false" />
+		<level id="Chimes" base="1" level="1" mute="false" />
+		<level id="Sounds" base="1" level="1" mute="false" />
+		<level id="Videos" base="1" level="1" mute="false" />
+		<level id="Music" base="1" level="1" mute="false" />
+		<level id="Backgrounds" base="1" level="1" mute="false" />
+	</sound-levels>
+	<clues total="0">
+		<penalty>None</penalty>
+		<penaltyvalue>0</penaltyvalue>
+		<bonus>None</bonus>
+		<bonusvalue>0</bonusvalue>
+		<duration>999</duration>
+	</clues>
+	<rooms />
+	<languages>
+		<language id="0">English</language>
+		<language id="1" />
+		<language id="2" />
+		<language id="3" />
+		<language id="4" />
+	</languages>
+	<music>
+		<track name="Background Ship Sounds" source="stories/BB/Ambient Ship Audio 1.mp3" volume="0.41" />
+		<track name="Fail Music" source="stories/BB/Blackbeard Fail Music.mp3" volume="0.5" />
+		<track name="Success Music" source="stories/BB/Victory Music with voice - end of game at trunk.mp3" volume="0.5" />
+		<track name="Game Muisc" source="stories/BB/Pirates of the Caribbean - Hes a Pirate.mp3" volume="0.4" />
+		<track name="3rd Door Opem" source="stories/BB/pan-waddle-105521.mp3" volume="0.5" />
+	</music>
+	<requiredscreens />
+	<reset />
+	<devices>
+		<device id="1" type="Network" style="Device" channel="0" name="Squawkers" host="192.168.0.102" protocol="TCP" localport="0" port="80" heartbeat="0" json="false" visible="true" commands="true">
+			<description>The Smartass Parrot</description>
+			<command name="Whistle" text="" code="MP3?play=7" />
+			<command name="Trapped" text="You're trapped in the Brig" code="MP3?play=1" />
+			<command name="How you gonna get out?" text="How you gonna get out?" code="MP3?play=2" />
+			<command name="Catch fish" text="Catch me some fish" code="MP3?play=3" />
+			<command name="Look at the Kid" text="Look at the Kid" code="MP3?play=4" />
+			<command name="Have some Grog" text="Have some Grog" code="MP3?play=5" />
+			<command name="Prisoners are out" text="Prisoners are out, buccaneers abound" code="MP3?play=6" />
+			<command name="Walk the Plank" text="" code="MP3?play=8" />
+			<command name="Dont Eat Me" text="" code="MP3?play=9" />
+			<command name="Mind the Boat" text="" code="MP3?play=10" />
+			<command name="Fly the Colors" text="" code="MP3?play=11" />
+			<command name="Go to Cartegena" text="" code="MP3?play=13" />
+			<command name="Jewels and Coins" text="" code="MP3?play=15" />
+			<command name="Lower the Sail" text="" code="MP3?play=17" />
+			<command name="Lucky Guess" text="" code="MP3?play=19" />
+			<command name="New Captain" text="" code="MP3?play=21" />
+			<command name="Turn the Words" text="" code="MP3?play=23" />
+		</device>
+		<device id="16" type="MQTT" style="Device" channel="0" name="Red Button Light BB" topic="" visible="true" commands="true">
+			<description>Red Button Light BB</description>
+			<command name="Red BTN Light On" text="/dingtian/relay8809/in/r8" code="ON" />
+			<command name="Red Btn Light Off" text="/dingtian/relay8809/in/r8" code="OFF" />
+		</device>
+		<device id="17" type="MQTT" style="Device" channel="0" name="Red Start Button BB" topic="/dingtian/relay8809/out/i8" visible="true" commands="true">
+			<description>Red Start button for BB</description>
+		</device>
+		<device id="20" type="MQTT" style="Device" channel="0" name="Complete game input" topic="/dingtian/relay8809/out/i7" visible="true" commands="true">
+			<description>Complete game input</description>
+		</device>
+		<device id="21" type="MQTT" style="Device" channel="0" name="Jail Door (Closed=ON)" topic="/dingtian/relay8809/out/i1" visible="true" commands="true">
+			<description>Jail Door Closed</description>
+		</device>
+	</devices>
+	<objectives>
+		<objective id="2" rank="Primary" name="Message In A Bottle - 8367" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="2" name="What is Kidd holding?" type="Text" source="" score="0" weight="1">
+					<text>What is Kidd holding?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="19" name="Kidds Message" type="Text" source="" score="0" weight="1">
+					<text>What does the bottle message reveal to you? Does anything stand out?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="60" name="Note - Matt" type="Text" source="" score="0" weight="1">
+					<text>What on that note stands out? Fortune favors a *bold* pirate!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="1" rank="Primary" name="Scratchy Compass - RATS" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="1" name="Wall Scratches" type="Text" source="" score="0" weight="1">
+					<text>Many prisoners would count down the days until they walked the plank, but Kidd seems to have written down nautical directions instead...</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="22" name="Rats" type="Text" source="" score="0" weight="1">
+					<text>These "pests" were often considered the bringers of death and plague.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="49" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>You're close to answering Kidd's final riddle....These "Pests" are creeping him out right now!! Do you see any in the brig?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="53" name="Scratches (Matt)" type="Text" source="" score="0" weight="1">
+					<text>Have ye translated ol' Cpt. Bonnet's final message? He's left a riddle for ye to solve... and the answer's only four letters long.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="69" name="For Fools" type="Text" source="" score="0" weight="1">
+					<text>Do you see all the nautical directions under the window? Use the compass across the room to translate that message.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="3" rank="Primary" name="Fishing Pole - Get the Brig Key" event="" score="0">
+			<narrative>Use the fishing pole to get the key from the dog.</narrative>
+			<clues>
+				<clue id="47" name="Poochie" type="Text" source="" score="0" weight="1">
+					<text>Poochie keeps the keys to everything - He will not be swayed! What a loyal mutt!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="15" rank="Primary" name="Open the Brig Door" event="" score="0">
+			<narrative>Use the key from the dog and open the brig door</narrative>
+			<clues />
+		</objective>
+		<objective id="4" rank="Primary" name="Crossword Puzzle - SALT" event="" score="0">
+			<narrative>Solve the crossword puzzle, turn it sideways, compare to chart on wall, it shows SALT. SALT opens word lock on small gray box</narrative>
+			<clues>
+				<clue id="4" name="Crossword" type="Text" source="" score="0" weight="1">
+					<text>It is easy to lose orientation on the high seas, especially when trying to do crossword puzzles.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="35" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>Be sure to reference the matching crossword in the room. 4 numbers  represent 4 letters. The answer for your next lock will form a word.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="51" name="Brig" type="Text" source="" score="0" weight="1">
+					<text>Do you see the crossword on the wall outside the brig? Be sure to turn your handheld crossword sideways to match it!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="55" name="Bypass for Kids" type="Text" source="" score="0" weight="1">
+					<text>What kind of water is in the sea?? 4 letters to open your next lock.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="59" name="Rigging vs Yardarm" type="Text" source="" score="0" weight="1">
+					<text>You're so close with that crossword! 1 letter is incorrect. Double check your work.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="5" rank="Primary" name="Islands - 8794" event="" score="0">
+			<narrative>Look in the small wooden cube for the shape of four islands. Refer to the islands on the wall in that order:
+Antigua 8
+Barbados 7
+Jamaica 9
+Trinidad 4
+ Opens black lock on box with studs</narrative>
+			<clues>
+				<clue id="3" name="Star Box" type="Text" source="" score="0" weight="1">
+					<text>Privateers and pirates alike used a STAR to guide them around the Caribbean...</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="36" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>You're close with that STAR box... it's easier to see the islands if you look with some light shining in.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="54" name="Islands" type="Text" source="" score="0" weight="1">
+					<text>The 4 islands you need for your next code are Antigua, Barbados, Jamaica, and Trinidad.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="58" name="Assist 2" type="Text" source="" score="0" weight="1">
+					<text>Use the flashlight with the star box! 4 islands inside for 4 digits.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="6" rank="Primary" name="Knots - 5817" event="" score="0">
+			<narrative>Knot clock has knots corresponding to time. Knots are shown in the back of the wine holder. 4x3 grid of circles shows which ones to do in which order. The positions on the clock correspond to the hours on the clock - you get 5817</narrative>
+			<clues>
+				<clue id="20" name="Cannon Knot" type="Text" source="" score="0" weight="1">
+					<text>You can KNOT load or fire that cannon until you remove what's in the barrel. Hurry mates!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="25" name="Wall Circle" type="Text" source="" score="0" weight="1">
+					<text>View that circle of knots as a clock!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="29" name="Identical Knots" type="Text" source="" score="0" weight="1">
+					<text>Some knots look similar at first, but still have differences.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="37" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>Have some grog! There could be something hidden behind them...</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="44" name="Which Knots?" type="Text" source="" score="0" weight="1">
+					<text>Use that black spot clue you found to help narrow down which knots you need from the crate!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="48" name="Lock Help" type="Text" source="" score="0" weight="1">
+					<text>These number locks are tricky! Double check you've lined the digits up to the SIDE of the lock!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="56" name="Wrong Order" type="Text" source="" score="0" weight="1">
+					<text>Double check your order of knots. Use the black spot clue as your guide.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="62" name="The BEST pun" type="Text" source="" score="0" weight="1">
+					<text>That black spot note and those bottles in the corner will... *tie*... into the next puzzle!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="8" rank="Primary" name="Cypher Wheel - CROSS BONES" event="" score="0">
+			<narrative>THe cypher wheel requires you to set up the cyphers like this:
+For the first word, Cyphers should be ordered 
+C (arrow on 4)
+B (arrow on 5)
+A (arrow on 8)
+Then the combinations are C6 (look at A), Cn (look at B) CV (Look at B), C7 (Look at B), CY (Look at A) - CROSS
+
+FOr the second one, place the gears:
+A (arrow on 7)
+C (arrow on 5)
+B (arrow on 3)
+B6-&gt;C, Bk-&gt;C, BA-&gt;A, BJ-&gt;C, B8-&gt;A (BONES)
+
+The two word locks on the half barrel are CROSS and BONES</narrative>
+			<clues>
+				<clue id="8" name="Cypher Base" type="Text" source="" score="0" weight="1">
+					<text>It is futile to try and solve the cypher wheels without the base! Carry on yer search!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="26" name="Gear Placement" type="Text" source="" score="0" weight="1">
+					<text>Double check that your gears are in the correct order (C,B,A) and starting positions as the note instructs.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="27" name="Instruction Clue" type="Text" source="" score="0" weight="1">
+					<text>An important clue you need remains uncovered. Double check the CAGED lantern!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="32" name="Decoding Assist" type="Text" source="" score="0" weight="1">
+					<text>The column on the left is which gear to move where, the column on the right is the gear to read. Your answers will form words.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="45" name="All the Help!" type="Text" source="" score="0" weight="1">
+					<text>Set the gears first: C , B , A - Set to 4 , 5 , 8 on each arrow. Then you can move C to 6, and read gear A for your answer, etc.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="57" name="Ultima Hint" type="Text" source="" score="0" weight="1">
+					<text>The gears will give you two five letter words... C _ _ _ _ and B _ _ _ _ _ ... A pirate's favorite symbol, flown across the seas!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="16" rank="Primary" name="3rd Room Door - Blow out candles" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="70" name="Candles" type="Text" source="" score="0" weight="1">
+					<text>Blow out all 3 candles to move forward!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="71" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>Blow from the top! A short and strong blow will do the trick!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="11" rank="Primary" name="Sandbox" event="" score="0">
+			<narrative>Use the bellows found earlier to blow the sand away from the sand puzzle to reveal 24 R (HearT)</narrative>
+			<clues>
+				<clue id="13" name="Bellows" type="Text" source="" score="0" weight="1">
+					<text>Moving that sand is a good idea but there has to be a more advantageous way to go about it. A tool of sorts perhaps?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="40" name="Blow" type="Text" source="" score="0" weight="1">
+					<text>There she BLOWS! You'll need a tool to move that sand back!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="61" name="Matt blows" type="Text" source="" score="0" weight="1">
+					<text>You'll need to use a tool to see what's hidden *bellow* the sand! the symbols will help you set the ciphe*r*...</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="12" rank="Primary" name="Symbol Wheel" event="" score="0">
+			<narrative>Set the wheel so that the 24, R, and (heart) line up. Then the bottom of the jeweled box shows symbols which correspond to B T X and 8-26-4. Use this to open the desk drawer with BTX using combination 8-26-4 on the lock.</narrative>
+			<clues>
+				<clue id="14" name="Symbols" type="Text" source="" score="0" weight="1">
+					<text>24 - R - Heart will give you your three digit combination but which lock is it to? BTX? LAK? GMQ?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="31" name="Breakdown" type="Text" source="" score="0" weight="1">
+					<text>Anchor - Diamond - Arrow .. What matches up to those symbols? The letters say which lock to open, the numbers give you the code!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="63" name="Clarification" type="Text" source="" score="0" weight="1">
+					<text>Only one of those 3 locks opens, use the clue from the armoire to figure out which one.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="67" name="Sandbox/Jeweled Box" type="Text" source="" score="0" weight="1">
+					<text>The sandbox sets the cipher, while the armoire note reveals which lock to open and the code to open it.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="13" rank="Primary" name="Map Puzzle" event="" score="0">
+			<narrative>Assemble 15 pieces into a map</narrative>
+			<clues />
+		</objective>
+		<objective id="14" rank="Primary" name="Sail Ship" event="" score="0">
+			<narrative>Pull down the sail and sail the ship to the 3 islands - Cartegena (lower left),  Port Royale (Center, upper left), and San Juan (far right). 
+
+The first two islands yield the audio "AHOY". The third island yields "shiver me timbers" and opens the trunk and ends the game.</narrative>
+			<clues>
+				<clue id="16" name="Map Puzzle" type="Text" source="" score="0" weight="1">
+					<text>Let the puzzle be your guide.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="17" name="Ports" type="Text" source="" score="0" weight="1">
+					<text>To successfully escape with the treasure and your life you must stop at THREE different ports!!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="18" name="Lower the Sail" type="Event" source="11" score="0" weight="1">
+					<text>Trigger Event: Lower the Sail Clue with Squawkers</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="30" name="AHOY!" type="Text" source="" score="0" weight="1">
+					<text>You will hear "AHOY" when you land near the port! (Listen closely! sometimes its very quiet!)</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="38" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>You have the right idea, but you'll have to DOCK the ship at EACH port!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="39" name="Touch the Dock" type="Text" source="" score="0" weight="1">
+					<text>Once the ship has touched the CORRECT dock, go to the next dock shown on the puzzle!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="64" name="Controls" type="Text" source="" score="0" weight="1">
+					<text>You're ready to set the sail! Use the left rope to reverse, the right rope to go forward, and spin the wheel the direction you want to turn! Keep in mind, the ship can't turn and move at the same time!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="65" name="ULTRA HINT" type="Text" source="" score="0" weight="1">
+					<text>You're ready to set sail! Use the left rope to reverse, the right rope to go forward, and spin the wheel the direction you want to turn! Keep in mind, the ship can't turn and move at the same time! You'll need to dock at EACH port as shown on the map, starting by going to Cartagena. You'll hear AHOY when you've successfully docked!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="66" name="Three ports" type="Text" source="" score="0" weight="1">
+					<text>Cartegena ---&gt; Port Royale ---&gt; San Juan!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+	</objectives>
+	<events>
+		<event id="1" name="Start Game - On Running" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Running" value="0" />
+			</conditions>
+			<actions>
+				<action type="SetMusic" value="Background Ship Sounds" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+				<action type="Delay" value="30000" />
+				<action type="Device" deviceid="1" command="Trapped" level="0" />
+			</actions>
+		</event>
+		<event id="3" name="On Success" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Ended" value="0" />
+				<condition type="Success" name="" operator="=" tag="true" value="0" />
+			</conditions>
+			<actions>
+				<action type="SetExitScreen" value="stories/BB/pirate booty 1.jpg" />
+				<action type="SendMessage" format="Text" screen="Countdown" channel="0" duration="60000" source="0" volume="1" loop="false" alert="false">You Escaped and Captured Captain Blackbeard's Booty!</action>
+				<action type="MusicStop" screen="Countdown" channel="0" />
+				<action type="SetBackground" screen="Countdown" channel="0" source="stories/BB/pirate booty 1.jpg" />
+				<action type="Delay" value="5000" />
+				<action type="Device" deviceid="1" command="New Captain" level="0" />
+			</actions>
+		</event>
+		<event id="4" name="On Failure" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Ended" value="0" />
+				<condition type="Success" name="" operator="=" tag="false" value="0" />
+			</conditions>
+			<actions>
+				<action type="SetBackground" screen="Countdown" channel="0" source="stories/BB/walktheplank1.jpg" />
+				<action type="MusicStop" screen="Countdown" channel="0" />
+				<action type="SendMessage" format="Text" screen="Countdown" channel="0" duration="60000" source="0" volume="1" loop="false" alert="false">You Failed...
+WALK THE PLANK!</action>
+				<action type="SetMusic" value="Fail Music" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+				<action type="Delay" value="32000" />
+				<action type="MusicStop" screen="Countdown" channel="0" />
+			</actions>
+		</event>
+		<event id="5" name="Squawkers Whistle" type="Single" mode="All" color="142 68 173 255" gmvisible="true" active="true">
+			<conditions />
+			<actions>
+				<action type="Device" deviceid="1" command="Whistle" level="1" />
+			</actions>
+		</event>
+		<event id="9" name="Sq - How get out?" type="Single" mode="All" color="155 89 182 255" gmvisible="true" active="true">
+			<conditions />
+			<actions>
+				<action type="Device" deviceid="1" command="How you gonna get out?" level="0" />
+			</actions>
+		</event>
+		<event id="10" name="Sq - Prisoners Out" type="Single" mode="All" color="155 89 182 255" gmvisible="true" active="true">
+			<conditions />
+			<actions>
+				<action type="Device" deviceid="1" command="Prisoners are out" level="0" />
+			</actions>
+		</event>
+		<event id="6" name="Reset" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Resetting" value="0" />
+			</conditions>
+			<actions>
+				<action type="MusicStop" screen="Countdown" channel="0" />
+			</actions>
+		</event>
+		<event id="7" name="Success - Music Override" type="Single" mode="All" color="0 0 255 255" gmvisible="true" active="true">
+			<conditions />
+			<actions>
+				<action type="MusicStop" screen="Countdown" channel="0" />
+				<action type="SetBackground" screen="Countdown" channel="0" source="stories/BB/pirate booty 1.jpg" />
+				<action type="EndSessionSuccess" value="" />
+				<action type="Delay" value="1000" />
+				<action type="SetMusic" value="Success Music" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+				<action type="Delay" value="47000" />
+				<action type="MusicStop" screen="Countdown" channel="0" />
+			</actions>
+		</event>
+		<event id="8" name="On Resume" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Paused" value="0" />
+			</conditions>
+			<actions>
+				<action type="SetMusic" value="Background Ship Sounds" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+			</actions>
+		</event>
+		<event id="11" name="Lower the Sail Clue with Squawkers" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions />
+			<actions>
+				<action type="Device" deviceid="1" command="Whistle" level="0" />
+				<action type="SendMessage" format="Text" screen="Countdown" channel="0" duration="60000" source="0" volume="1" loop="false" alert="false">Lower the Sail!</action>
+				<action type="Delay" value="5000" />
+				<action type="Device" deviceid="1" command="Lower the Sail" level="0" />
+			</actions>
+		</event>
+		<event id="13" name="Clue Whistle" type="Recurring" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="ClueSent" name="" operator="=" tag="" value="0" />
+			</conditions>
+			<actions>
+				<action type="TriggerEvent" id="5" />
+			</actions>
+		</event>
+		<event id="14" name="Ship Game Start" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="false">
+			<conditions>
+				<condition type="ObjectiveComplete" name="" operator="=" tag="true" value="13" />
+			</conditions>
+			<actions>
+				<action type="MusicStop" screen="Countdown" channel="0" />
+				<action type="SetMusic" value="Game Muisc" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+			</actions>
+		</event>
+		<event id="15" name="Start Game From Button" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="DeviceStatusCode" name="" operator="=" tag="ON" value="17" />
+				<condition type="StoryState" name="" operator="=" tag="Idle" value="0" />
+			</conditions>
+			<actions>
+				<action type="StoryState" state="Running" />
+				<action type="Device" deviceid="16" command="Red BTN Light On" level="0" />
+				<action type="Delay" value="1000" />
+				<action type="Device" deviceid="16" command="Red Btn Light Off" level="0" />
+				<action type="Delay" value="1000" />
+				<action type="Device" deviceid="16" command="Red BTN Light On" level="0" />
+			</actions>
+		</event>
+		<event id="16" name="Red Button Off Game Not Running" type="Recurring" mode="Any" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Ended" value="0" />
+				<condition type="StoryState" name="" operator="=" tag="Resetting" value="0" />
+				<condition type="StoryState" name="" operator="=" tag="Offline" value="0" />
+				<condition type="StoryState" name="" operator="=" tag="Idle" value="0" />
+			</conditions>
+			<actions>
+				<action type="Device" deviceid="16" command="Red Btn Light Off" level="0" />
+			</actions>
+		</event>
+		<event id="17" name="Reset Timer on Button Press" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="DeviceStatusCode" name="" operator="=" tag="ON" value="17" />
+				<condition type="StoryState" name="" operator="=" tag="Ended" value="0" />
+			</conditions>
+			<actions>
+				<action type="StoryState" state="Resetting" />
+				<action type="Device" deviceid="16" command="Red BTN Light On" level="0" />
+				<action type="Delay" value="250" />
+				<action type="Device" deviceid="16" command="Red Btn Light Off" level="0" />
+				<action type="Delay" value="250" />
+				<action type="Device" deviceid="16" command="Red BTN Light On" level="0" />
+				<action type="Delay" value="250" />
+				<action type="Device" deviceid="16" command="Red Btn Light Off" level="0" />
+				<action type="Delay" value="250" />
+				<action type="Device" deviceid="16" command="Red BTN Light On" level="0" />
+				<action type="Delay" value="250" />
+				<action type="Device" deviceid="16" command="Red Btn Light Off" level="0" />
+			</actions>
+		</event>
+		<event id="18" name="Music Off on Reset" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Resetting" value="0" />
+			</conditions>
+			<actions>
+				<action type="MusicStop" screen="Countdown" channel="0" />
+			</actions>
+		</event>
+		<event id="19" name="Win Room when Vid Game WIns" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="DeviceStatusCode" name="" operator="=" tag="ON" value="20" />
+				<condition type="StoryState" name="" operator="=" tag="Running" value="0" />
+			</conditions>
+			<actions>
+				<action type="EndSessionSuccess" value="" />
+			</actions>
+		</event>
+		<event id="20" name="Clear Jail Objective When Door Opened" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Running" value="0" />
+				<condition type="DeviceStatusCode" name="" operator="=" tag="OFF" value="21" />
+				<condition type="TimeRemaining" name="" operator="&lt;" tag="" value="59" />
+			</conditions>
+			<actions>
+				<action type="CompleteObjective" id="15" />
+			</actions>
+		</event>
+		<event id="21" name="RATS Unlock" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="ObjectiveComplete" name="" operator="=" tag="true" value="1" />
+			</conditions>
+			<actions>
+				<action type="Device" deviceid="1" command="Catch fish" level="0" />
+			</actions>
+		</event>
+		<event id="22" name="Brig Unlock" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="ObjectiveComplete" name="" operator="=" tag="true" value="15" />
+			</conditions>
+			<actions>
+				<action type="Device" deviceid="1" command="Dont Eat Me" level="0" />
+				<action type="Delay" value="2000" />
+				<action type="Device" deviceid="1" command="Prisoners are out" level="0" />
+				<action type="Delay" value="120000" />
+				<action type="Device" deviceid="1" command="Have some Grog" level="0" />
+			</actions>
+		</event>
+		<event id="23" name="KNOTS Unlock" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="ObjectiveComplete" name="" operator="=" tag="true" value="6" />
+			</conditions>
+			<actions>
+				<action type="Device" deviceid="1" command="Fly the Colors" level="0" />
+			</actions>
+		</event>
+		<event id="24" name="CROSS BONES Unlock" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="ObjectiveComplete" name="" operator="=" tag="true" value="8" />
+			</conditions>
+			<actions>
+				<action type="Device" deviceid="1" command="Walk the Plank" level="0" />
+			</actions>
+		</event>
+		<event id="25" name="3rd Room Unlock" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="ObjectiveComplete" name="" operator="=" tag="true" value="16" />
+			</conditions>
+			<actions>
+				<action type="Device" deviceid="1" command="Mind the Boat" level="0" />
+				<action type="Delay" value="90000" />
+				<action type="Device" deviceid="1" command="Lower the Sail" level="0" />
+			</actions>
+		</event>
+		<event id="26" name="BTX Unlock" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="ObjectiveComplete" name="" operator="=" tag="true" value="12" />
+			</conditions>
+			<actions>
+				<action type="Device" deviceid="1" command="Go to Cartegena" level="0" />
+			</actions>
+		</event>
+	</events>
+	<values />
+</story>

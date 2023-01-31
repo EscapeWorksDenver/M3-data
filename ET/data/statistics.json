@@ -1,0 +1,125 @@
+{
+  "StoryID": "ET",
+  "TotalSessions": 3456,
+  "TotalPlayers": 232,
+  "TotalSuccess": 1769,
+  "SuccessRate": 0.51,
+  "AverageCluesRemaining": 0,
+  "AverageCluesUsed": 8,
+  "AveragePlayers": 1,
+  "AverageScore": 0,
+  "AverageTimeRemaining": 295532,
+  "AverageTimeUsed": 0,
+  "Objectives": {
+    "1": {
+      "ID": 1,
+      "Name": "Maze - Retrieve the Hook",
+      "AverageTimeRemaining": 2936513,
+      "AverageCompletionRate": 0.97,
+      "AverageCluesRequired": 0.06,
+      "TotalTime": 9872558465,
+      "TotalCompleted": 3362,
+      "TotalCluesRequired": 203
+    },
+    "2": {
+      "ID": 2,
+      "Name": "Recess - Grab the Satchel",
+      "AverageTimeRemaining": 2796227,
+      "AverageCompletionRate": 0.97,
+      "AverageCluesRequired": 0.32,
+      "TotalTime": 9420490046,
+      "TotalCompleted": 3369,
+      "TotalCluesRequired": 1107
+    },
+    "3": {
+      "ID": 3,
+      "Name": "Spin Fish Spin - Get the Door Key",
+      "AverageTimeRemaining": 2461314,
+      "AverageCompletionRate": 0.97,
+      "AverageCluesRequired": 0.58,
+      "TotalTime": 8284785253,
+      "TotalCompleted": 3366,
+      "TotalCluesRequired": 2010
+    },
+    "4": {
+      "ID": 4,
+      "Name": "Dial Box - 1 to 1, 2 to 2, 3 to 3",
+      "AverageTimeRemaining": 1926922,
+      "AverageCompletionRate": 0.97,
+      "AverageCluesRequired": 0.73,
+      "TotalTime": 6447483385,
+      "TotalCompleted": 3346,
+      "TotalCluesRequired": 2538
+    },
+    "5": {
+      "ID": 5,
+      "Name": "Table - S2W1-Double Triangle, E1S1-Beetle, N2E1-Pyramid, W2N1-Snake",
+      "AverageTimeRemaining": 967591,
+      "AverageCompletionRate": 0.94,
+      "AverageCluesRequired": 0.95,
+      "TotalTime": 3131126964,
+      "TotalCompleted": 3236,
+      "TotalCluesRequired": 3266
+    },
+    "6": {
+      "ID": 6,
+      "Name": "Pharaoh Door",
+      "AverageTimeRemaining": 894663,
+      "AverageCompletionRate": 0.9,
+      "AverageCluesRequired": 0.15,
+      "TotalTime": 2775245859,
+      "TotalCompleted": 3102,
+      "TotalCluesRequired": 511
+    },
+    "7": {
+      "ID": 7,
+      "Name": "Open the Ark - Get the Mirror",
+      "AverageTimeRemaining": 689198,
+      "AverageCompletionRate": 0.76,
+      "AverageCluesRequired": 0.56,
+      "TotalTime": 1818795876,
+      "TotalCompleted": 2639,
+      "TotalCluesRequired": 1933
+    },
+    "8": {
+      "ID": 8,
+      "Name": "Pharaoh's Riddle - The Letter E",
+      "AverageTimeRemaining": 505233,
+      "AverageCompletionRate": 0.44,
+      "AverageCluesRequired": 0.56,
+      "TotalTime": 762397483,
+      "TotalCompleted": 1509,
+      "TotalCluesRequired": 1951
+    },
+    "9": {
+      "ID": 9,
+      "Name": "Set the Cipher - 3=E",
+      "AverageTimeRemaining": 419854,
+      "AverageCompletionRate": 0.29,
+      "AverageCluesRequired": 0.46,
+      "TotalTime": 419014590,
+      "TotalCompleted": 998,
+      "TotalCluesRequired": 1576
+    },
+    "10": {
+      "ID": 10,
+      "Name": "Set the Pillar - Get the Laser",
+      "AverageTimeRemaining": 396090,
+      "AverageCompletionRate": 0.11,
+      "AverageCluesRequired": 0.27,
+      "TotalTime": 150910514,
+      "TotalCompleted": 381,
+      "TotalCluesRequired": 919
+    },
+    "11": {
+      "ID": 11,
+      "Name": "Table workaround - RDLLUDDLUUR",
+      "AverageTimeRemaining": 407838,
+      "AverageCompletionRate": 0.0,
+      "AverageCluesRequired": 0.0,
+      "TotalTime": 5709740,
+      "TotalCompleted": 14,
+      "TotalCluesRequired": 1
+    }
+  }
+}

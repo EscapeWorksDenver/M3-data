@@ -1,0 +1,514 @@
+<story>
+	<id>SHATS</id>
+	<name>Spookeasy - Haunting at the Speakeasy</name>
+	<description />
+	<active>true</active>
+	<type>Standard</type>
+	<color>0 0 0 255</color>
+	<scoring>Time</scoring>
+	<timebonus>0</timebonus>
+	<duration>60</duration>
+	<players>8</players>
+	<difficulty>1</difficulty>
+	<teamname>Investigators</teamname>
+	<chime ontext="true" onimage="true" onaudio="false" onvideo="false">sound/chime.mp3</chime>
+	<audioducking>false</audioducking>
+	<externalid />
+	<marquee>stories/SHATS/hauntedhouse.jpg</marquee>
+	<poster>stories/SHATS/hauntedhouse.jpg</poster>
+	<styleinfo>
+		<base>haunt</base>
+		<basecolor>0 0 0 255</basecolor>
+		<orientation>1</orientation>
+		<background>stories/SHATS/hauntedhouse.jpg</background>
+		<backgroundlinkedtotimer>false</backgroundlinkedtotimer>
+		<clueicon>images/clue.png</clueicon>
+		<clueusedicon>images/clue-used.png</clueusedicon>
+		<timer hidewhenidle="false" hidewhenzero="false" font="" fontbold="false" fontitalic="false" fontshadow="false" left="0" top="0" size="480" color="255 255 255 255" override="false" visible="true" />
+		<messages font="" fontbold="false" fontitalic="false" fontshadow="false" left="0" top="0" size="40" color="255 255 255 255" override="false" visible="true" />
+		<clues left="0" top="0" override="true" visible="false" />
+		<customcss />
+		<customhtml />
+	</styleinfo>
+	<prologue>false</prologue>
+	<epilogue>false</epilogue>
+	<sound-levels>
+		<level id="Master" base="1" level="1" mute="false" />
+		<level id="Chimes" base="1" level="1" mute="false" />
+		<level id="Sounds" base="1" level="1" mute="false" />
+		<level id="Videos" base="1" level="1" mute="false" />
+		<level id="Music" base="1" level="1" mute="false" />
+		<level id="Backgrounds" base="1" level="1" mute="false" />
+	</sound-levels>
+	<clues total="3">
+		<penalty>None</penalty>
+		<penaltyvalue>0</penaltyvalue>
+		<bonus>None</bonus>
+		<bonusvalue>0</bonusvalue>
+		<duration>200</duration>
+	</clues>
+	<rooms />
+	<languages>
+		<language id="0">English</language>
+		<language id="1" />
+		<language id="2" />
+		<language id="3" />
+		<language id="4" />
+	</languages>
+	<music>
+		<track name="Spooky Music" source="stories/SHATS/SpookeasyOST.mp3" volume="0.68" />
+		<track name="Ghost Laughing" source="stories/SHATS/Ghost Laughing High Pitch.mp3" volume="1" />
+		<track name="Flower Shop OST" source="stories/SHATS/SpookeasyFlowerShopOST.mp3" volume="0.5" />
+	</music>
+	<requiredscreens />
+	<reset />
+	<devices>
+		<device id="3" type="Hue" style="OnOff" channel="1" name="Hue Hanging Light" format="Dimmable" base="0 0 0 255" visible="true" commands="true">
+			<description>Hugh.</description>
+			<property name="Hue Name" type="" value="" />
+			<property name="Model ID" type="" value="" />
+			<command name="On" text="On" code="" />
+			<command name="Off" text="Off" code="" />
+		</device>
+		<device id="22" type="MQTT" style="Device" channel="0" name="Red Button Light FS" topic="" visible="true" commands="false">
+			<description>Red Start Button Light FS</description>
+			<command name="Red BTN Light On" text="/dingtian/relay4154/in/r4" code="ON" />
+			<command name="Red Btn Light Off" text="/dingtian/relay4154/in/r4" code="OFF" />
+		</device>
+		<device id="23" type="MQTT" style="Device" channel="0" name="Red Start Button FS" topic="/dingtian/relay4154/out/i4" visible="true" commands="true">
+			<description>Red Start Button Light FS</description>
+		</device>
+		<device id="24" type="MQTT" style="Device" channel="0" name="FS Final Door Solve ON=SOLVED" topic="/dingtian/relay4154/out/i3" visible="true" commands="false">
+			<description>Detects Final Door Solved</description>
+		</device>
+		<device id="26" type="MQTT" style="Device" channel="0" name="Knock Door opened - OFF is open" topic="/dingtian/relay4154/out/i2" visible="true" commands="true">
+			<description>Off is open - relay</description>
+		</device>
+	</devices>
+	<objectives>
+		<objective id="1" rank="Primary" name="Jukebox Puzzle - BROADCAST" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="1" name="Vague" type="Text" source="" score="0" weight="1">
+					<text>The old owner of the Speakeasy hid notes in strange places... be sure to check inside the picture frames!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="3" rank="Primary" name="Flower Poem and Book - 439-5768" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="4" name="Book Hint" type="Text" source="" score="0" weight="1">
+					<text>Those kids left a book lying around... It's all hogwash, but a few pages of it may be helpful. Check page 225!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="14" name="Flowers Order" type="Text" source="" score="0" weight="1">
+					<text>Get those flowers in order as listed on page 225. There are seven digits in the phone number!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="28" name="Matt are you proud?" type="Text" source="" score="0" weight="1">
+					<text>You can *count* on those flowers to make the right *call*.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="31" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>The number of flowers in each color gives you the digits, and the numbers next to each color on the page gives you the order of the digits!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="46" name="In Case of Fools..." type="Text" source="" score="0" weight="1">
+					<text>Focus on the flowers in the silver vases on the shelf. How many flowers are Pink? Yellow? Etc. Follow the order of colors in the page you found for your phone number.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="4" rank="Primary" name="Knocks" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="5" name="Knocks help" type="Text" source="" score="0" weight="1">
+					<text>Listen... I can't talk through the phone, but I can show you how to get in... Listen closely, ignore that cackling...</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="12" name="Entered the Speakeasy" type="Audio" source="stories/SHATS/SpookeasyOST.mp3" score="0" weight="1">
+					<text />
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="20" name="Explanation" type="Text" source="" score="0" weight="1">
+					<text>In order to enter the speakeasy, you have to know the secret knock. Try it out on that door to get in.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="5" rank="Primary" name="Fish from a Barrel/Kunlun Lock" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="6" name="Classic" type="Text" source="" score="0" weight="1">
+					<text>Fish from a barrel, Lock without a hole, get it in the groove...</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="33" name="Explanation" type="Text" source="" score="0" weight="1">
+					<text>Use the small metal piece you fished out of the barrel on the lock without a hole on the booth bench. Fit it into the indent on the side of the lock, then pull!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="13" rank="Primary" name="Dartboard" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="32" name="Play Darts" type="Text" source="" score="0" weight="1">
+					<text>Ghost hunting can be stressful! Relax by throwing some darts and hitting the bullseye...</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="14" rank="Primary" name="Gears - Tarot (Empress 3, Lovers 6, Fool 0, Strength 8)" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="34" name="How To" type="Text" source="" score="0" weight="1">
+					<text>to translate those phrases, get the gears in the right order, just like Nucky wrote about.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="35" name="Arcana Help" type="Text" source="" score="0" weight="1">
+					<text>Each Major Arcana card correlates to a number... find those numbers and put them in order, top to bottom!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="44" name="Attache General Hint" type="Text" source="" score="0" weight="1">
+					<text>There are two sides to those puzzle pieces- solve the puzzle on each side to open up that attache case! The cards will help with one, and a certain spell will help the other....</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="45" name="Use Flashlight" type="Text" source="" score="0" weight="1">
+					<text>Use the flashlight to illuminate the secret message inside the bar. Set the gears to decode the message, with the correct order and starting positions.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="49" name="For Fools" type="Text" source="" score="0" weight="1">
+					<text>Once the gears are lined up using the message in the bar, use the coded message on the tiles to start decoding. Move the first gear to the first letter, "N", then look at the last gear for the translated letter, "E". Four tarot cards for four numbers!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="15" rank="Primary" name="Unlocking Spell - 2875" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="38" name="Flip" type="Text" source="" score="0" weight="1">
+					<text>Flip those puzzles pieces over to reveal a new clue!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="39" name="Case #" type="Text" source="" score="0" weight="1">
+					<text>Go to case #293 as shown on the puzzle pieces!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="40" name="Index" type="Text" source="" score="0" weight="1">
+					<text>Look through the index at the back of the Witchcraft book. You are looking for a "Lock Opening" spell!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="41" name="Fools" type="Text" source="" score="0" weight="1">
+					<text>The lock opening spell mentions a snake and a raven! The puzzle pieces will give you figure numbers for each animal!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="7" rank="Primary" name="Drinks" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="8" name="Drinks" type="Text" source="" score="0" weight="1">
+					<text>Looks like the barkeep's still haunting the booze rack... humor him, would ya? What drinks can ya make with what's lighting up? Press that red square button in the first room...</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="15" name="Ingredients and Drinks" type="Text" source="" score="0" weight="1">
+					<text>There are nine ingredients total, and you can make five drinks with them... Add 'em up and pay at the register!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="17" name="List Drinks" type="Text" source="" score="0" weight="1">
+					<text>The five drinks you can make are the French 75, the Southside Fizz, the Corpse Reviver, the Hanky Panky and the Bourbon Ricky.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="47" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>The ingredients that are left are club soda, bourbon, bitters, cognac, champagne, lemon juice, brandy, vermouth, and gin.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="48" name="Extra help" type="Text" source="" score="0" weight="1">
+					<text>There are only 9 bottles that remain in stock. When you call the barkeep, the ingredients left you have to work with will be lit up. The ones that are "out" will be left in the dark. This only lasts a short while, before you will need to call the barkeep again.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="51" name="Button Time!" type="Text" source="" score="0" weight="1">
+					<text>All together now! All four buttons at once!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="52" name="Button Assist" type="Text" source="" score="0" weight="1">
+					<text>Below the Dartboard - Desk Cabinet - Register - Safe!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="9" rank="Primary" name="Find Four Letters - REST" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="11" name="Search for letters" type="Text" source="" score="0" weight="1">
+					<text>What, you didn't know about the secret route out the back? Everyone had one, back in the day... For now, search it closely. Check every corner...</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="22" name="Four Letters" type="Text" source="" score="0" weight="1">
+					<text>Make sure to examine every corner of that secret area... there might be some ectoplasm on the walls back there!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="23" name="Lock problems" type="Text" source="" score="0" weight="1">
+					<text>Unscramble those four letters into a word to get that lock open!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="27" name="No T" type="Text" source="" score="0" weight="1">
+					<text>1 more letter! Those spiders might be getting the better of you!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="50" name="For fools..." type="Text" source="" score="0" weight="1">
+					<text>_ _ _ _ in peace!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="10" rank="Primary" name="Table" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="16" name="Four Offerings" type="Text" source="" score="0" weight="1">
+					<text>The ghost requires four offerings... check that chapter on communicating with the dead to figure out which items go on which spots on the summoning table!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="24" name="Something Nice to Look At" type="Text" source="" score="0" weight="1">
+					<text>There are four offerings in total, placed on four magic circles... an offering of wealth, of a drink, of a brand of smokes, and of something nice to look at. The thing that's nice to look at stands alone... it may have been skipped over during a previous puzzle!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="11" rank="Primary" name="Levers - Up Down Down Middle" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="18" name="Pipe" type="Text" source="" score="0" weight="1">
+					<text>You may be able to hear the voices of the spirits with that parabolic mic! Try using it on the opening of the rightmost pipe in the last room! Everyone else, stay quiet!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="42" name="Shut up" type="Text" source="" score="0" weight="1">
+					<text>The voices are very quiet and can only be heard with the mic. Try to stay as quiet as possible while someone listens!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="43" name="Directions" type="Text" source="" score="0" weight="1">
+					<text>UP, MIDDLE, and DOWN are your options here! Listen carefully for the order in which those words are spoken!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="12" rank="Primary" name="VICTORY" event="" score="0">
+			<narrative />
+			<clues />
+		</objective>
+	</objectives>
+	<events>
+		<event id="1" name="Knocks- plays OST" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="ObjectiveComplete" name="" operator="=" tag="true" value="4" />
+			</conditions>
+			<actions>
+				<action type="SetMusic" value="Ghost Laughing" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+				<action type="Delay" value="6000" />
+				<action type="SetMusic" value="Spooky Music" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+			</actions>
+		</event>
+		<event id="2" name="music off on reset" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Resetting" value="0" />
+			</conditions>
+			<actions>
+				<action type="MusicStop" screen="Countdown" channel="0" />
+			</actions>
+		</event>
+		<event id="3" name="FS Start Game From Button" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="DeviceStatusCode" name="" operator="=" tag="ON" value="23" />
+				<condition type="StoryState" name="" operator="=" tag="Idle" value="0" />
+				<condition type="DeviceStatusCode" name="" operator="=" tag="OFF" value="24" />
+				<condition type="DeviceStatusCode" name="" operator="=" tag="ON" value="26" />
+			</conditions>
+			<actions>
+				<action type="StoryState" state="Running" />
+				<action type="Device" deviceid="22" command="Red BTN Light On" level="0" />
+				<action type="Delay" value="1000" />
+				<action type="Device" deviceid="22" command="Red Btn Light Off" level="0" />
+				<action type="Delay" value="1000" />
+				<action type="Device" deviceid="22" command="Red BTN Light On" level="0" />
+				<action type="Device" deviceid="3" command="Off" level="0" />
+				<action type="SetMusic" value="Flower Shop OST" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+			</actions>
+		</event>
+		<event id="4" name="Red Button and Music Off Game Not Running" type="Recurring" mode="Any" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Ended" value="0" />
+				<condition type="StoryState" name="" operator="=" tag="Resetting" value="0" />
+				<condition type="StoryState" name="" operator="=" tag="Offline" value="0" />
+				<condition type="StoryState" name="" operator="=" tag="Idle" value="0" />
+			</conditions>
+			<actions>
+				<action type="Device" deviceid="22" command="Red Btn Light Off" level="0" />
+			</actions>
+		</event>
+		<event id="5" name="Reset Timer on Button Press (game ended)" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="DeviceStatusCode" name="" operator="=" tag="ON" value="23" />
+				<condition type="StoryState" name="" operator="=" tag="Ended" value="0" />
+			</conditions>
+			<actions>
+				<action type="StoryState" state="Resetting" />
+				<action type="Device" deviceid="22" command="Red BTN Light On" level="0" />
+				<action type="Delay" value="250" />
+				<action type="Device" deviceid="22" command="Red Btn Light Off" level="0" />
+				<action type="Delay" value="250" />
+				<action type="Device" deviceid="22" command="Red BTN Light On" level="0" />
+				<action type="Delay" value="250" />
+				<action type="Device" deviceid="22" command="Red Btn Light Off" level="0" />
+				<action type="Delay" value="250" />
+				<action type="Device" deviceid="22" command="Red BTN Light On" level="0" />
+				<action type="Delay" value="250" />
+				<action type="Device" deviceid="22" command="Red Btn Light Off" level="0" />
+			</actions>
+		</event>
+		<event id="6" name="End Game Final Puzzle Solved" type="Single" mode="All" color="0 0 255 255" gmvisible="true" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Running" value="0" />
+				<condition type="DeviceStatusCode" name="" operator="=" tag="ON" value="24" />
+			</conditions>
+			<actions>
+				<action type="CompleteObjective" id="11" />
+				<action type="EndSessionSuccess" value="" />
+			</actions>
+		</event>
+		<event id="7" name="Door Opened after Secret Knock" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="DeviceStatusCode" name="" operator="=" tag="OFF" value="26" />
+				<condition type="StoryState" name="" operator="=" tag="Running" value="0" />
+			</conditions>
+			<actions>
+				<action type="CompleteObjective" id="4" />
+			</actions>
+		</event>
+		<event id="8" name="FS music override" type="Single" mode="All" color="0 0 255 255" gmvisible="true" active="true">
+			<conditions />
+			<actions>
+				<action type="SetMusic" value="Flower Shop OST" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+			</actions>
+		</event>
+	</events>
+	<values />
+</story>

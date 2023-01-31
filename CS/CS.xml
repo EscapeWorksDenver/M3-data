@@ -1,0 +1,589 @@
+<story>
+	<id>CS</id>
+	<name>Christmas Story</name>
+	<description />
+	<active>true</active>
+	<type>Standard</type>
+	<color>0 0 0 255</color>
+	<scoring>Time</scoring>
+	<timebonus>0</timebonus>
+	<duration>60</duration>
+	<players>8</players>
+	<difficulty>1</difficulty>
+	<teamname>Red Ryders</teamname>
+	<chime ontext="true" onimage="true" onaudio="false" onvideo="false">stories/CS/SantaShootyoureyeout (2).mp3</chime>
+	<audioducking>true</audioducking>
+	<externalid />
+	<marquee>stories/CS/m3-marquee.jpg</marquee>
+	<poster>stories/CS/m3-poster.jpg</poster>
+	<styleinfo>
+		<base>standard</base>
+		<basecolor>0 0 0 255</basecolor>
+		<orientation>1</orientation>
+		<background>stories/CS/3b8fae99590ce82917045884476e9473.jpg</background>
+		<backgroundlinkedtotimer>true</backgroundlinkedtotimer>
+		<clueicon>images/clue.png</clueicon>
+		<clueusedicon>images/clue-used.png</clueusedicon>
+		<timer hidewhenidle="false" hidewhenzero="false" font="Black Chancery" fontbold="false" fontitalic="false" fontshadow="false" left="0" top="0" size="480" color="255 255 255 255" override="false" visible="true" />
+		<messages font="Black Chancery" fontbold="false" fontitalic="false" fontshadow="false" left="0" top="0" size="40" color="255 255 255 255" override="false" visible="true" />
+		<clues left="0" top="0" override="false" visible="true" />
+		<customcss />
+		<customhtml />
+	</styleinfo>
+	<prologue>false</prologue>
+	<epilogue>false</epilogue>
+	<clues total="0">
+		<penalty>None</penalty>
+		<penaltyvalue>0</penaltyvalue>
+		<bonus>None</bonus>
+		<bonusvalue>0</bonusvalue>
+		<duration>180</duration>
+	</clues>
+	<rooms />
+	<languages>
+		<language id="0">English</language>
+		<language id="1" />
+		<language id="2" />
+		<language id="3" />
+		<language id="4" />
+	</languages>
+	<music>
+		<track name="Main Game Soundtrack" source="stories/CS/MainRoomMusicSoundtrack-smaller.mp3" volume="0.2" />
+		<track name="Success Audio (I Won) and Music" source="stories/CS/ACS Success Audio and Music.mp3" volume="0.8" />
+		<track name="Failure Audio (Fudge) and Music" source="stories/CS/ACS Failure Audio and Music.mp3" volume="0.81" />
+		<track name="Ralphie What do you Want For Christmas" source="stories/CS/Ralphie What Would you Like for Christmas.mp3" volume="0.84" />
+	</music>
+	<requiredscreens />
+	<reset />
+	<devices>
+		<device id="4" type="Network" style="Device" channel="0" name="ACS Controller" host="192.168.0.101" protocol="TCP" localport="0" port="80" heartbeat="1000" json="false" visible="true" commands="true">
+			<description>Controller for ACS automated puzzles</description>
+			<command name="School Box" text="Open School Wall Box" code="?SWITCH0=2" />
+			<command name="Open Gate" text="Open Gate to Outside" code="?SWITCH1=2" />
+			<command name="Flag Pole" text="Release Flag Pole" code="?SWITCH2=2" />
+			<command name="Furnace" text="Release Furnace" code="?SWITCH3=2" />
+			<command name="Bread Box" text="Release Bread Box" code="?SWITCH4=2" />
+			<command name="Play Radio" text="Play Radio Annie Audio" code="?SWITCH5=2" />
+			<command name="OPEN FIREPLACE " text="Finish Game and Open Fireplace" code="?SWITCH6=2" />
+		</device>
+	</devices>
+	<objectives>
+		<objective id="1" rank="Primary" name="Jake in the Box - Open Gate" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="1" name="Crank it" type="Text" source="" score="0" weight="1">
+					<text>Make sure to face your fears, Ralphie! (There's something off about that Jack-in-the-Box...)</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="2" rank="Primary" name="Arithmetic - 7333" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="2" name="Equations" type="Text" source="" score="0" weight="1">
+					<text>Be mindful of addition or subtraction! (The numbers will only fall into place if you solve the full equation...)</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="3" name="Halfsies" type="Text" source="" score="0" weight="1">
+					<text>7 __ __ 3 (Solve the full equationsand put those digits in order from left to right!)</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="3" rank="Primary" name="Missing Letters - DIRT" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="4" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>How strange...That's not how I remember the alphabet! Is it missing something?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="5" name="Extra Assist" type="Text" source="" score="0" weight="1">
+					<text>The alphabet on the wall is missing some letters - which letters, though?? Maybe they spell something out!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="4" rank="Primary" name="Cursive - Train, Dollhouse, Football: SANTA" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="6" name="Presents" type="Text" source="" score="0" weight="1">
+					<text>What do those kids want for Christmas? Miss Shields had them write papers on it! Maybe Ralphie can use those to practice his cursive.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="7" name="Spell it Out" type="Text" source="" score="0" weight="1">
+					<text>Take a look at the underlined letters - Do they spell something out?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="48" name="Lock Assist" type="Text" source="" score="0" weight="1">
+					<text>SANTA is correct! Line the letters up to the Master Notches on the front of the lock, and pull down to open!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="5" rank="Primary" name="Count the Toys - 23413" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="8" name="How Many??" type="Text" source="" score="0" weight="1">
+					<text>How many unicorns are there? How many balls? Practice your counting with the toys show on the cork board!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="9" name="Halfsies" type="Text" source="" score="0" weight="1">
+					<text>"2 __ 4 __ 3"   The pictures on the board will give you the order of toys. Count up how many of those toys you can find - Unicorns, Balls, etc.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="10" name="Balls" type="Text" source="" score="0" weight="1">
+					<text>Although that picture only shows a basketball, you'll need to count ALL of the balls in the drawer!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="11" name="Trucks" type="Text" source="" score="0" weight="1">
+					<text>Make sure to only count the trucks and not ALL of the cars!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="12" name="Lock Help" type="Text" source="" score="0" weight="1">
+					<text>The mailbox lock is tricky - be sure to line your code up to the MASTER notches.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="50" name="Lock Assist" type="Text" source="" score="0" weight="1">
+					<text>Your code is correct! Line the digits up to the Master Notches on the front of the lock, and pull down to open!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="6" rank="Primary" name="Dress Randy - GAME MASTER REMOTE TRIGGER" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="13" name="Dress The Boy" type="Text" source="" score="0" weight="1">
+					<text>Poor Randy - he's never going to stay warm like that! Make sure you bundle him up properly!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="14" name="Present The Boy" type="Text" source="" score="0" weight="1">
+					<text>Please present Randy to the camera! We have to make sure he's dressed well enough to stay warm!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="7" rank="Primary" name="Tongue on Flagpole - Drop the Flag" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="15" name="Triple-Dog-Dare" type="Text" source="" score="0" weight="1">
+					<text>I triple - dog - dare you to put that tongue on the pole!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="16" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>That tongue has magnets on one side of it-attach it to the pole on the tongue outline!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="8" rank="Primary" name="Align the Tires - FUDGE" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="17" name="Move 'em" type="Text" source="" score="0" weight="1">
+					<text>You can move those tires to be able to look at them on all sides.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="18" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>Once your tires are set, rotate them all at the same time to see the word spelled out on the other side!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="19" name="FUUuuu..." type="Text" source="" score="0" weight="1">
+					<text>Ralphie says something naughty in A Christmas Story - the movie censors it out with a holiday treat! (F _ _ _)</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="49" name="Lock Assist" type="Text" source="" score="0" weight="1">
+					<text>FUDGE is correct! Line the letters up to the Master Notches on the front of the lock, and pull down to open!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="9" rank="Primary" name="Hats - 1983" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="20" name="Missing Numbers" type="Text" source="" score="0" weight="1">
+					<text>Take a look inside those hats - you're missing an important detail!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="21" name="Characters" type="Text" source="" score="0" weight="1">
+					<text>If you're not sure which hat goes on which hook, there's picture frames of the characters with their names!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="22" name="Matching" type="Text" source="" score="0" weight="1">
+					<text>Match each hat to each character using the labeled picture. Hang each hat on the correct hook to get the order of your next code.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="23" name="Fanatics" type="Text" source="" score="0" weight="1">
+					<text>Let's see if you know your Christmas Story trivia! What year was the movie released?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="24" name="Door Help" type="Text" source="" score="0" weight="1">
+					<text>1983 is correct! Be sure to hit the lock button after inputting the numbers to open up that door!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="10" rank="Primary" name="STOCKING 1 - Furnace Puzzle" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="25" name="Find the Tiles" type="Text" source="" score="0" weight="1">
+					<text>There are 8 tiles hidden throughout the room, to go with the tile already mounted on top of the furnace.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="26" name="Matching" type="Text" source="" score="0" weight="1">
+					<text>Match those colored tiles colored tiles to the picture on top of the furnace! The orientation doesn't matter, just the placement!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="27" name="Orientation" type="Text" source="" score="0" weight="1">
+					<text>Make sure you orient that color block clue the correctly! Use the only furnace tile stuck in place as your guide.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="28" name="Aligning Pipes" type="Text" source="" score="0" weight="1">
+					<text>Don't worry about aligning those pipes! Simply place the correct colors into the correct spots.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="11" rank="Primary" name="STOCKING 2 - Christmas Lights: 5234" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="29" name="Orientation" type="Text" source="" score="0" weight="1">
+					<text>Look at the note of lights with the tips pointing upwards!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="30" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>What an interesting light pattern on the tree! Maybe counting the flashes of each color will help...</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="31" name="Ultra Assist" type="Text" source="" score="0" weight="1">
+					<text>Count the flashes of each color on the tree! The number of flashes will give you the digits - the light bulb note gives you the order!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="12" rank="Primary" name="Crossword Puzzle - VICTOR: 3L- 2R - 1D - 3D - 3U - 2U" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="32" name="Push" type="Text" source="" score="0" weight="1">
+					<text>The old man loves doing the daily newspaper crossword every morning! The issue seems to be the author's last names...</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="33" name="Numbered" type="Text" source="" score="0" weight="1">
+					<text>Those last names are numbered! Author #1 will go in the 1. spot on the crossword, and so on...</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="34" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>Make sure you have all those last names correct and in the right places on the crossword! The red-highlighted boxes will give you a word.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="35" name="Ultra Assist" type="Text" source="" score="0" weight="1">
+					<text>VICTOR is correct! Those letters have to be useful somehow! Now that I think of it - wasn't there a directional guide with letters on it?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="36" name="ALL THE HELP" type="Text" source="" score="0" weight="1">
+					<text>If V is the first red highlighted letter, and V is 3 to the Left on the letter guide, then 3 Lefts will be your first input into the directional lock! Continue this pattern for the rest of your letters.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="37" name="Fanatics" type="Text" source="" score="0" weight="1">
+					<text>Do you remember the name of the Lone Rider's nephew's horse? Starts with a V...</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="47" name="LOCK RESET" type="Text" source="" score="0" weight="1">
+					<text>Reset the lock by pushing the silver bars into the body of the lock twice. It helps if you aren't pulling on the lock as you input the directions!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="52" name="Books at School" type="Text" source="" score="0" weight="1">
+					<text>Did you leave your books at school again, Ralphie?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="13" rank="Primary" name="STOCKING 3 - OVLTN" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="38" name="Delay" type="Text" source="" score="0" weight="1">
+					<text>Once you've set the clock, it may take a few moments for your next clue.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="39" name="Correct Time" type="Text" source="" score="0" weight="1">
+					<text>Make sure your clock is set to the correct time. Check the roman numeral guide on the back if you're not sure!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="40" name="How-To" type="Text" source="" score="0" weight="1">
+					<text>Use the small wheel on the back to adjust the hands of the clock!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="46" name="Little Orphan Annie Audio" type="Audio" source="stories/CS/OrphanAnnieTime.mp3" score="0" weight="1">
+					<text />
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="51" name="Lock Assist" type="Text" source="" score="0" weight="1">
+					<text>OVLTN is correct! Line the letters up to the Master Notches on the front of the lock, and pull down to open!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="14" rank="Primary" name="STOCKING 4 - Telephone: PL61200" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="41" name="Closer Look" type="Text" source="" score="0" weight="1">
+					<text>Take a closer look ad for your prized BB gun...Is there anything on it that could be useful, like a phone number?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="42" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>Your phone number will have two letters and five numbers. Are there any on that ad that stand out to you?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="43" name="Answer" type="Text" source="" score="0" weight="1">
+					<text>Your phone number is PL6-1200. Be sure to dial the phone properly, rotating the dial all the way to the stopper for each number!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="44" name="Answer Assist" type="Text" source="" score="0" weight="1">
+					<text>Place your finger into the hole of the number you would like to enter, then rotate dial all the way until you reach the silver stopper- continue this for each input!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="15" rank="Primary" name="ALL 4 Stocking Hung - GAME MASTER REMOTE TRIGGER" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="45" name="BB GUN FINISH" type="Text" source="" score="0" weight="1">
+					<text>Make sure you tell us what you want for Christmas, Raphie! All together, loud and clear!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+	</objectives>
+	<events>
+		<event id="3" name="Open Gate Manual" type="Single" mode="All" color="0 0 255 255" gmvisible="true" active="true">
+			<conditions />
+			<actions>
+				<action type="Device" deviceid="4" command="Open Gate" level="0" />
+				<action type="CompleteObjective" id="1" />
+			</actions>
+		</event>
+		<event id="1" name="School Box - Randy Dressed" type="Single" mode="All" color="39 174 96 255" gmvisible="true" active="true">
+			<conditions />
+			<actions>
+				<action type="Device" deviceid="4" command="School Box" level="0" />
+				<action type="CompleteObjective" id="6" />
+			</actions>
+		</event>
+		<event id="4" name="Open Bread Box" type="Single" mode="All" color="0 0 255 255" gmvisible="true" active="true">
+			<conditions />
+			<actions>
+				<action type="Device" deviceid="4" command="Bread Box" level="0" />
+				<action type="CompleteObjective" id="15" />
+			</actions>
+		</event>
+		<event id="5" name="Start Game Audio" type="Single" mode="All" color="0 0 255 255" gmvisible="true" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Running" value="0" />
+			</conditions>
+			<actions>
+				<action type="SetMusic" value="Main Game Soundtrack" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+			</actions>
+		</event>
+		<event id="6" name="Play Audio on Success" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Ended" value="0" />
+				<condition type="Success" name="" operator="=" tag="true" value="0" />
+			</conditions>
+			<actions>
+				<action type="SetBackground" screen="Countdown" channel="0" source="stories/CS/Ralphie With Gun.jpg" />
+				<action type="SendMessage" format="Text" screen="Countdown" channel="0" duration="180000" source="0" volume="1" loop="false" alert="false">You Won! You Won You Won You Won!</action>
+				<action type="MusicStop" screen="Countdown" channel="0" />
+				<action type="SetMusic" value="Success Audio (I Won) and Music" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+				<action type="Delay" value="120000" />
+				<action type="MusicStop" screen="Countdown" channel="0" />
+			</actions>
+		</event>
+		<event id="7" name="Play Audio on Fail" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Ended" value="0" />
+				<condition type="Success" name="" operator="=" tag="false" value="0" />
+			</conditions>
+			<actions>
+				<action type="SetBackground" screen="Countdown" channel="0" source="stories/CS/Scutlaughing.jpg" />
+				<action type="MusicStop" screen="Countdown" channel="0" />
+				<action type="SetMusic" value="Failure Audio (Fudge) and Music" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+				<action type="SetBackground" screen="Countdown" channel="0" source="stories/CS/Scutlaughing.jpg" />
+				<action type="Delay" value="120000" />
+				<action type="MusicStop" screen="Countdown" channel="0" />
+			</actions>
+		</event>
+		<event id="8" name="Stockings up-What do you want for Christmas?" type="Single" mode="All" color="39 174 96 255" gmvisible="true" active="true">
+			<conditions />
+			<actions>
+				<action type="SendMessage" format="Audio" screen="Countdown" channel="0" duration="180000" source="stories/CS/Ralphie What Would you Like for Christmas.mp3" volume="1" loop="false" alert="false" />
+				<action type="SendMessage" format="Text" screen="Countdown" channel="0" duration="180000" source="0" volume="1" loop="false" alert="false">Ralphie, what would you like for Christmas?</action>
+			</actions>
+		</event>
+		<event id="2" name="Reveal Red Ryder - Win" type="Single" mode="All" color="192 57 43 255" gmvisible="true" active="true">
+			<conditions />
+			<actions>
+				<action type="Device" deviceid="4" command="OPEN FIREPLACE" level="0" />
+				<action type="EndSessionSuccess" value="" />
+				<action type="Device" deviceid="4" command="OPEN FIREPLACE" level="0" />
+			</actions>
+		</event>
+	</events>
+	<values />
+</story>

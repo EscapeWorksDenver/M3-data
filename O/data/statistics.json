@@ -1,0 +1,165 @@
+{
+  "StoryID": "O",
+  "TotalSessions": 2139,
+  "TotalPlayers": 198,
+  "TotalSuccess": 889,
+  "SuccessRate": 0.42,
+  "AverageCluesRemaining": 0,
+  "AverageCluesUsed": 8,
+  "AveragePlayers": 1,
+  "AverageScore": 0,
+  "AverageTimeRemaining": 200281,
+  "AverageTimeUsed": 0,
+  "Objectives": {
+    "1": {
+      "ID": 1,
+      "Name": "Chess Game - Green on Green (4)",
+      "AverageTimeRemaining": 2913727,
+      "AverageCompletionRate": 0.98,
+      "AverageCluesRequired": 0.43,
+      "TotalTime": 6080948441,
+      "TotalCompleted": 2087,
+      "TotalCluesRequired": 929
+    },
+    "2": {
+      "ID": 2,
+      "Name": "Locker - 3164",
+      "AverageTimeRemaining": 2129827,
+      "AverageCompletionRate": 0.95,
+      "AverageCluesRequired": 0.61,
+      "TotalTime": 4325679139,
+      "TotalCompleted": 2031,
+      "TotalCluesRequired": 1296
+    },
+    "3": {
+      "ID": 3,
+      "Name": "C H O - 618",
+      "AverageTimeRemaining": 2544884,
+      "AverageCompletionRate": 0.54,
+      "AverageCluesRequired": 0.27,
+      "TotalTime": 2916437797,
+      "TotalCompleted": 1146,
+      "TotalCluesRequired": 585
+    },
+    "4": {
+      "ID": 4,
+      "Name": "Lockbox - 2618",
+      "AverageTimeRemaining": 2367225,
+      "AverageCompletionRate": 0.79,
+      "AverageCluesRequired": 0.34,
+      "TotalTime": 4019549092,
+      "TotalCompleted": 1698,
+      "TotalCluesRequired": 730
+    },
+    "5": {
+      "ID": 5,
+      "Name": "Clean Room Door - 414215",
+      "AverageTimeRemaining": 1904708,
+      "AverageCompletionRate": 0.98,
+      "AverageCluesRequired": 0.59,
+      "TotalTime": 3982744503,
+      "TotalCompleted": 2091,
+      "TotalCluesRequired": 1268
+    },
+    "6": {
+      "ID": 6,
+      "Name": "Scanner Cabinet - L U R D D R U R D L",
+      "AverageTimeRemaining": 1271182,
+      "AverageCompletionRate": 0.95,
+      "AverageCluesRequired": 0.8,
+      "TotalTime": 2584314887,
+      "TotalCompleted": 2033,
+      "TotalCluesRequired": 1705
+    },
+    "7": {
+      "ID": 7,
+      "Name": "Memory Puzzle",
+      "AverageTimeRemaining": 1169441,
+      "AverageCompletionRate": 0.9,
+      "AverageCluesRequired": 0.47,
+      "TotalTime": 2254683640,
+      "TotalCompleted": 1928,
+      "TotalCluesRequired": 1004
+    },
+    "8": {
+      "ID": 8,
+      "Name": "Breaker Box - R1 L2 R2 L3 L4",
+      "AverageTimeRemaining": 869319,
+      "AverageCompletionRate": 0.84,
+      "AverageCluesRequired": 0.53,
+      "TotalTime": 1557821086,
+      "TotalCompleted": 1792,
+      "TotalCluesRequired": 1124
+    },
+    "9": {
+      "ID": 9,
+      "Name": "Switch Cabinet - U D D / U D U",
+      "AverageTimeRemaining": 570481,
+      "AverageCompletionRate": 0.65,
+      "AverageCluesRequired": 0.71,
+      "TotalTime": 792398778,
+      "TotalCompleted": 1389,
+      "TotalCluesRequired": 1529
+    },
+    "10": {
+      "ID": 10,
+      "Name": "Top File - B R G Y (7239)",
+      "AverageTimeRemaining": 452920,
+      "AverageCompletionRate": 0.44,
+      "AverageCluesRequired": 0.29,
+      "TotalTime": 421669387,
+      "TotalCompleted": 931,
+      "TotalCluesRequired": 622
+    },
+    "11": {
+      "ID": 11,
+      "Name": "Disarm Alarm - 411891",
+      "AverageTimeRemaining": 363553,
+      "AverageCompletionRate": 0.04,
+      "AverageCluesRequired": 0.1,
+      "TotalTime": 28357175,
+      "TotalCompleted": 78,
+      "TotalCluesRequired": 210
+    },
+    "12": {
+      "ID": 12,
+      "Name": "Final Phrase - Open the Safe - 4679113A",
+      "AverageTimeRemaining": 281100,
+      "AverageCompletionRate": 0.05,
+      "AverageCluesRequired": 0.15,
+      "TotalTime": 27547891,
+      "TotalCompleted": 98,
+      "TotalCluesRequired": 326
+    },
+    "13": {
+      "ID": 13,
+      "Name": "Eliza is Barbara",
+      "AverageTimeRemaining": 2440445,
+      "AverageCompletionRate": 0.31,
+      "AverageCluesRequired": 0.16,
+      "TotalTime": 1632658197,
+      "TotalCompleted": 669,
+      "TotalCluesRequired": 333
+    },
+    "14": {
+      "ID": 14,
+      "Name": "I gotta *Hand* it to ya....",
+      "AverageTimeRemaining": 1223148,
+      "AverageCompletionRate": 0.19,
+      "AverageCluesRequired": 0.04,
+      "TotalTime": 489259522,
+      "TotalCompleted": 400,
+      "TotalCluesRequired": 95
+    },
+    "15": {
+      "ID": 15,
+      "Name": "Boomstick - Place gun on rack",
+      "AverageTimeRemaining": 1347275,
+      "AverageCompletionRate": 0.04,
+      "AverageCluesRequired": 0.01,
+      "TotalTime": 101045660,
+      "TotalCompleted": 75,
+      "TotalCluesRequired": 11
+    }
+  }
+}

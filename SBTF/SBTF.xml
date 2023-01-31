@@ -1,0 +1,567 @@
+<story>
+	<id>SBTF</id>
+	<name>Speakeasy Beyond The FlowerShop</name>
+	<description />
+	<active>true</active>
+	<type>Standard</type>
+	<color>0 0 0 255</color>
+	<scoring>Time</scoring>
+	<timebonus>0</timebonus>
+	<duration>60</duration>
+	<players>15</players>
+	<difficulty>1</difficulty>
+	<teamname>Investigators</teamname>
+	<chime ontext="true" onimage="true" onaudio="false" onvideo="false">stories/SBTF/CAR HORN ALERT.mp3</chime>
+	<audioducking>false</audioducking>
+	<externalid />
+	<marquee>stories/SBTF/m3-marquee.jpg</marquee>
+	<poster>stories/SBTF/m3-poster.jpg</poster>
+	<styleinfo>
+		<base>standard</base>
+		<basecolor>0 0 0 255</basecolor>
+		<orientation>1</orientation>
+		<background>stories/SBTF/speakeasy BACKGROUND.jpg</background>
+		<backgroundlinkedtotimer>true</backgroundlinkedtotimer>
+		<clueicon>images/clue.png</clueicon>
+		<clueusedicon>images/clue-used.png</clueusedicon>
+		<timer hidewhenidle="false" hidewhenzero="false" font="Book Antiqua" fontbold="false" fontitalic="false" fontshadow="false" left="0" top="0" size="480" color="255 255 255 255" override="false" visible="true" />
+		<messages font="Book Antiqua" fontbold="false" fontitalic="false" fontshadow="false" left="0" top="0" size="40" color="255 255 255 255" override="false" visible="true" />
+		<clues left="0" top="0" override="false" visible="true" />
+		<customcss />
+		<customhtml />
+	</styleinfo>
+	<prologue>false</prologue>
+	<epilogue>false</epilogue>
+	<sound-levels>
+		<level id="Master" base="1" level="1" mute="false" />
+		<level id="Chimes" base="1" level="1" mute="false" />
+		<level id="Sounds" base="1" level="1" mute="false" />
+		<level id="Videos" base="1" level="1" mute="false" />
+		<level id="Music" base="1" level="1" mute="false" />
+		<level id="Backgrounds" base="1" level="1" mute="false" />
+	</sound-levels>
+	<clues total="0">
+		<penalty>None</penalty>
+		<penaltyvalue>0</penaltyvalue>
+		<bonus>None</bonus>
+		<bonusvalue>0</bonusvalue>
+		<duration>120</duration>
+	</clues>
+	<rooms />
+	<languages>
+		<language id="0">English</language>
+		<language id="1" />
+		<language id="2" />
+		<language id="3" />
+		<language id="4" />
+	</languages>
+	<music>
+		<track name="Success" source="stories/SBTF/Maple Leaf Rag FS fadeout.mp3" volume="0.75" />
+		<track name="Fail" source="stories/SBTF/05_-_Luther_NXazO7V FAILED.mp3" volume="0.6" />
+		<track name="Enter_Speakeasy" source="stories/SBTF/MemoriesofYouFShigh.mp3" volume="0.06" />
+	</music>
+	<requiredscreens />
+	<reset />
+	<devices>
+		<device id="2" type="Hue" style="OnOff" channel="5" name="Hanging Bulb" format="Dimmable" base="0 0 0 255" visible="true" commands="true">
+			<description>Bulb hanging on final hallway</description>
+			<property name="Hue Name" type="" value="Hmmm" />
+			<property name="Model ID" type="" value="" />
+			<command name="On" text="Turns On the hue" code="ON" />
+			<command name="Off" text="Turns of the Hue" code="OFF" />
+		</device>
+		<device id="10" type="MQTT" style="Device" channel="0" name="Red Button Light FS" topic="" visible="true" commands="true">
+			<description>Red Start Button Light FS</description>
+			<command name="Red Btn Light On" text="/dingtian/relay4154/in/r4" code="ON" />
+			<command name="Red Btn Light Off" text="/dingtian/relay4154/in/r4" code="OFF" />
+		</device>
+		<device id="11" type="MQTT" style="Device" channel="0" name="Red Start Button FS" topic="/dingtian/relay4154/out/i4" visible="true" commands="false">
+			<description>Start Button Next To FS</description>
+		</device>
+		<device id="12" type="MQTT" style="Device" channel="0" name="FS Final Door Solve" topic="/dingtian/relay4154/out/i3" visible="true" commands="true">
+			<description>Solve FInal Door FS</description>
+		</device>
+		<device id="25" type="MQTT" style="Device" channel="0" name="Speakeasy Door Opened (OFF is open)" topic="/dingtian/relay4154/out/i2" visible="true" commands="true">
+			<description />
+		</device>
+	</devices>
+	<objectives>
+		<objective id="11" rank="Secondary" name="Welcome!" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="28" name="Welcome to the Flowershop" type="Audio" source="stories/SBTF/Welcome (1).mp3" score="0" weight="1">
+					<text />
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="1" rank="Primary" name="Flower Math Riddle - 250" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="1" name="Petals" type="Text" source="" score="0" weight="1">
+					<text>You're close to solving that math riddle - Take a look at the last blue flower on the note. How many petals does it have?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="4" name="Frames" type="Text" source="" score="0" weight="1">
+					<text>Smaldone was an avid art collector! But maybe he's hidden something inside those frames?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="25" name="Look At The Blue Flowers" type="Audio" source="stories/SBTF/Lookatblueflowers (1).mp3" score="0" weight="1">
+					<text />
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="26" name="Count The Petals" type="Audio" source="stories/SBTF/Countbluepetals (1).mp3" score="0" weight="1">
+					<text />
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="35" name="Math" type="Text" source="" score="0" weight="1">
+					<text>Each red flower equals 200. Each white flower equals 10. Each Blue flower EXCEPT the last one equals 50.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="45" name="Focus Shift" type="Text" source="" score="0" weight="1">
+					<text>Did you ever open the picture frame behind you? Focus on the math riddle with the pictures of flowers on it to move forward.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="14" rank="Primary" name="Flower Poem - 439-5768 - Secret Knock. Door Opens" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="47" name="Sunflowers" type="Text" source="" score="0" weight="1">
+					<text>Double check your flower count - SUNFLOWERS are gold!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="48" name="Wine Bottle" type="Text" source="" score="0" weight="1">
+					<text>Don't forget what the wine bottle told you- How does Smaldone run the Flower Shop?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="49" name="Count the Flowers and Make a Call" type="Audio" source="stories/SBTF/Countflowers&amp;call (1).mp3" score="0" weight="1">
+					<text />
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="50" name="Count the Flowers" type="Text" source="" score="0" weight="1">
+					<text>Focus on the flowers inside the silver vases on that shelf. How many flowers are red? Violet? Blue? Etc... There are 7 digits in a phone number.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="15" rank="Primary" name="Knocks" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="51" name="Knocks" type="Text" source="" score="0" weight="1">
+					<text>In order to enter the speakeasy, you'll have to know the secret knock. Try it out on that door to get in.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="52" name="Vague" type="Text" source="" score="0" weight="1">
+					<text>Smaldone's never gonna let you in without that secret knock.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="55" name="COPY IT" type="Text" source="" score="0" weight="1">
+					<text>You're close! Copy that knock EXACTLY as you hear it through the phone.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="3" rank="Primary" name="Barrel to Bench" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="5" name="Fishing" type="Text" source="" score="0" weight="1">
+					<text>Fish from a barrel
+Lock without a hole
+Get it in the groove</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="42" name="Lock Help" type="Text" source="" score="0" weight="1">
+					<text>That keychain piece you found will unlock the bench. Line it up to the groove on the side of the lock perfectly, and pull it down to open.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="54" name="Workaround hint" type="Text" source="" score="0" weight="1">
+					<text>The hole in the barrel looks suspicious.. Is there a way to fish something out of it!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="4" rank="Primary" name="Dartboard/Vent" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="6" name="Bullseye Button" type="Text" source="" score="0" weight="1">
+					<text>When playing darts, Smaldone always hit a bullseye!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="5" rank="Primary" name="Gears - 09 Right 31 Left 37 Right" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="7" name="Hidden Door" type="Text" source="" score="0" weight="1">
+					<text>Nucky used that bar in the speakeasy to smuggle things up from New Orleans. Maybe he hid a hint in there to get things in gear?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="8" name="Hidden Door 2" type="Text" source="" score="0" weight="1">
+					<text>⚜️ Smaldone was known for his secret hideaways! ⚜️</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="9" name="Safe Tip" type="Text" source="" score="0" weight="1">
+					<text>Tip for the lock. Spin the dial to the right a number of times and stop at __. Then, turn the dial to the left, turning past the first number before you stop at __. Then turn right until you hit __.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="10" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>You're close here - double check your work! Be sure you have those gears in the correct order and starting positions EXACTLY. Your answers will form numbers and words!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="40" name="Use the flashlight" type="Text" source="" score="0" weight="1">
+					<text>Use the flashlight to illuminate the secret message inside the bar. Set the gears to decode the message, with the correct order and starting positions.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="53" name="For fools.." type="Text" source="" score="0" weight="1">
+					<text>The starting positions will be as follows:  Gear B=H, Gear C=Y, and Gear A=G. Once the gears are set up using the arrows on the peg board, move gear B to S and read gear A for your answer. S=0</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="6" rank="Primary" name="Drink Menu - 658" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="11" name="Call the Barkeep" type="Text" source="" score="0" weight="1">
+					<text>Take a look at that drink menu. How many drinks can you make? Press the red square button in the first room to call the barkeep, who'll illuminate what's left in stock...</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="12" name="Register" type="Text" source="" score="0" weight="1">
+					<text>You'll be able to make five drinks with what is left. Add them up and pay the total at that register lock!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="13" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>The ingredients that are left are club soda, bourbon, bitters, cognac, champagne, lemon juice, brandy, vermouth, and gin.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="14" name="Assist 2" type="Text" source="" score="0" weight="1">
+					<text>The five drinks you can make are the French 75, the Southside Fizz, the Corpse Reviver, the Hanky Panky and the Bourbon Ricky.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="15" name="Barkeep Assist" type="Text" source="" score="0" weight="1">
+					<text>Take a 2nd look at the bottles left in stock - It may be easier to see if you turn the lights off!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="43" name="Extra Help" type="Text" source="" score="0" weight="1">
+					<text>There are only 9 bottles that remain in stock. When you call the barkeep, the ingredients left you have to work with will be lit up. The ones that are "out" will be left in the dark. This only lasts a short while, before you will need to call the barkeep again.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="7" rank="Primary" name="Table Symbols - Ashtray to Flame/Birdcage to Feather/Lucky to Clover/Black Flower to Flower" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="16" name="Barkeep Confirms" type="Text" source="" score="0" weight="1">
+					<text>One secret button left! That table looks so symbolic... Can you find the right items that go on certain spots? You'll hear the barkeep when one is right!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="17" name="Table" type="Text" source="" score="0" weight="1">
+					<text>That table looks so symbolic... Can you find the right items that go on certain spots?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="18" name="Four Items" type="Text" source="" score="0" weight="1">
+					<text>Four items to place on the table... "The Lonely Flower," "Fire to Ash," "Are you feelin' LUCKY?" and "Birds of a feather, CAGED together..."</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="19" name="No Boiler Here" type="Text" source="" score="0" weight="1">
+					<text>Does that table look like a boiler? Hold on to that note, but for now, you'll have to find out which items are connected to the symbols!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="31" name="Four Unused Drinks" type="Text" source="" score="0" weight="1">
+					<text>Remember that drink menu? If you find the items that represent the four drinks you weren't able to make, that may help you figure out the mystery surrounding that table...</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="44" name="Barkeep confirms ONCE" type="Text" source="" score="0" weight="1">
+					<text>One secret button left! That table looks so symbolic... Can you find the right items that go on certain spots? You'll hear the barkeep when each one is right (there will be 4 spots that are special to him).</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="46" name="Leave it" type="Text" source="" score="0" weight="1">
+					<text>If the barkeep confirmed an item, leave it there! He will only confirm each item once, and will need them all in the correct place (at the same time) to give you that key!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="8" rank="Primary" name="Secret Door - 4 Buttons (Vent, Cabinet, Register, Safe)" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="20" name="Button Time!" type="Text" source="" score="0" weight="1">
+					<text>All together now! All four buttons at once!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="21" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>Below the Dartboard - Desk Cabinet - Register - On the Wall by the Barrel !!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="9" rank="Primary" name="Boiler Knobs" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="22" name="Where's the Poem?" type="Text" source="" score="0" weight="1">
+					<text>Remember that awful poem? Use it to reset the boiler!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="30" name="Faucets - Matt" type="Text" source="" score="0" weight="1">
+					<text>Think of those faucets as clocks... Now that I think about it, isn't it strange that those faucets are colored?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="10" rank="Primary" name="Levers - Up Down Down Middle" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="23" name="Hanky note" type="Text" source="" score="0" weight="1">
+					<text>Joey's got one final message... Be sure to read it Up and Down!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="24" name="Hanky 2" type="Text" source="" score="0" weight="1">
+					<text>You'll need ol' Joey's hanky to set those levers! Read it aloud!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+	</objectives>
+	<events>
+		<event id="1" name="Fail" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Ended" value="0" />
+				<condition type="Success" name="" operator="=" tag="false" value="0" />
+			</conditions>
+			<actions>
+				<action type="SetExitScreen" value="stories/SBTF/FAIL.jpg" />
+				<action type="SendMessage" format="Text" screen="Countdown" channel="0" duration="50000" source="0" volume="1" loop="false" alert="false">They don't sell booze in the slammer!</action>
+				<action type="SetMusic" value="Fail" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+				<action type="Delay" value="40000" />
+				<action type="MusicStop" screen="Countdown" channel="0" />
+			</actions>
+		</event>
+		<event id="2" name="Success" type="Single" mode="All" color="0 0 255 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Ended" value="0" />
+				<condition type="Success" name="" operator="=" tag="true" value="0" />
+			</conditions>
+			<actions>
+				<action type="SetExitScreen" value="stories/SBTF/SUCCESS.jpg" />
+				<action type="SetMusic" value="Success" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+				<action type="Delay" value="60000" />
+				<action type="MusicStop" screen="Countdown" channel="0" />
+			</actions>
+		</event>
+		<event id="3" name="Start Game From Button" type="Single" mode="All" color="0 0 255 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="DeviceStatusCode" name="" operator="=" tag="ON" value="11" />
+				<condition type="StoryState" name="" operator="=" tag="Idle" value="0" />
+				<condition type="DeviceStatusCode" name="" operator="=" tag="OFF" value="12" />
+			</conditions>
+			<actions>
+				<action type="StoryState" state="Running" />
+				<action type="Device" deviceid="10" command="Red Btn Light On" level="0" />
+				<action type="Delay" value="1000" />
+				<action type="Device" deviceid="10" command="Red Btn Light Off" level="0" />
+				<action type="Delay" value="1000" />
+				<action type="Device" deviceid="10" command="Red Btn Light On" level="0" />
+			</actions>
+		</event>
+		<event id="4" name="Red Button and Music Off Game Not Running" type="Recurring" mode="Any" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Ended" value="0" />
+				<condition type="StoryState" name="" operator="=" tag="Resetting" value="0" />
+				<condition type="StoryState" name="" operator="=" tag="Offline" value="0" />
+				<condition type="StoryState" name="" operator="=" tag="Idle" value="0" />
+			</conditions>
+			<actions>
+				<action type="Device" deviceid="10" command="Red Btn Light Off" level="0" />
+			</actions>
+		</event>
+		<event id="5" name="Reset Timer on Button Press (game ended)" type="Single" mode="All" color="0 0 255 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="DeviceStatusCode" name="" operator="=" tag="ON" value="11" />
+				<condition type="StoryState" name="" operator="=" tag="Ended" value="0" />
+			</conditions>
+			<actions>
+				<action type="StoryState" state="Resetting" />
+				<action type="Device" deviceid="10" command="Red Btn Light On" level="0" />
+				<action type="Delay" value="250" />
+				<action type="Device" deviceid="10" command="Red Btn Light Off" level="0" />
+				<action type="Delay" value="250" />
+				<action type="Device" deviceid="10" command="Red Btn Light On" level="0" />
+				<action type="Delay" value="250" />
+				<action type="Device" deviceid="10" command="Red Btn Light Off" level="0" />
+				<action type="Delay" value="250" />
+				<action type="Device" deviceid="10" command="Red Btn Light On" level="0" />
+				<action type="Delay" value="250" />
+				<action type="Device" deviceid="10" command="Red Btn Light Off" level="0" />
+			</actions>
+		</event>
+		<event id="6" name="Music Off on Reset" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Resetting" value="0" />
+			</conditions>
+			<actions>
+				<action type="MusicStop" screen="Countdown" channel="0" />
+			</actions>
+		</event>
+		<event id="7" name="Solve on Final Door Puzzle" type="Single" mode="All" color="0 0 255 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Running" value="0" />
+				<condition type="DeviceStatusCode" name="" operator="=" tag="ON" value="12" />
+			</conditions>
+			<actions>
+				<action type="CompleteObjective" id="10" />
+				<action type="EndSessionSuccess" value="" />
+				<action type="HueAction" action="Blink" group="1" />
+			</actions>
+		</event>
+		<event id="9" name="Hanging Light turns Bright" type="Manual" mode="All" color="0 0 255 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="DeviceStatusCode" name="" operator="=" tag="ON" value="2" />
+				<condition type="ObjectiveComplete" name="" operator="=" tag="true" value="10" />
+			</conditions>
+			<actions>
+				<action type="Delay" value="1000" />
+				<action type="HueAction" action="Blink" group="1" />
+			</actions>
+		</event>
+		<event id="10" name="Door Opened after Secret Knock" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="DeviceStatusCode" name="" operator="=" tag="OFF" value="25" />
+				<condition type="StoryState" name="" operator="=" tag="Running" value="0" />
+			</conditions>
+			<actions>
+				<action type="CompleteObjective" id="15" />
+			</actions>
+		</event>
+	</events>
+	<values />
+</story>

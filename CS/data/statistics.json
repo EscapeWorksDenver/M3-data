@@ -1,0 +1,195 @@
+{
+  "StoryID": "CS",
+  "TotalSessions": 379,
+  "TotalPlayers": 0,
+  "TotalSuccess": 248,
+  "SuccessRate": 0.65,
+  "AverageCluesRemaining": 0,
+  "AverageCluesUsed": 8,
+  "AveragePlayers": 0,
+  "AverageScore": 0,
+  "AverageTimeRemaining": 561467,
+  "AverageTimeUsed": 0,
+  "Objectives": {
+    "1": {
+      "ID": 1,
+      "Name": "Santa Claus box",
+      "AverageTimeRemaining": 3144556,
+      "AverageCompletionRate": 0.92,
+      "AverageCluesRequired": 0.17,
+      "TotalTime": 1100594878,
+      "TotalCompleted": 350,
+      "TotalCluesRequired": 66
+    },
+    "2": {
+      "ID": 2,
+      "Name": "Fruit Basket - 8457",
+      "AverageTimeRemaining": 2764346,
+      "AverageCompletionRate": 0.93,
+      "AverageCluesRequired": 0.37,
+      "TotalTime": 970285696,
+      "TotalCompleted": 351,
+      "TotalCluesRequired": 141
+    },
+    "3": {
+      "ID": 3,
+      "Name": "What I want for Christmas - train, doll house, football",
+      "AverageTimeRemaining": 2743220,
+      "AverageCompletionRate": 0.53,
+      "AverageCluesRequired": 0.15,
+      "TotalTime": 551387369,
+      "TotalCompleted": 201,
+      "TotalCluesRequired": 55
+    },
+    "4": {
+      "ID": 4,
+      "Name": "Arithmetic - 7333",
+      "AverageTimeRemaining": 2681855,
+      "AverageCompletionRate": 0.92,
+      "AverageCluesRequired": 0.21,
+      "TotalTime": 938649310,
+      "TotalCompleted": 350,
+      "TotalCluesRequired": 81
+    },
+    "5": {
+      "ID": 5,
+      "Name": "Cursive - SANTA",
+      "AverageTimeRemaining": 2206091,
+      "AverageCompletionRate": 0.92,
+      "AverageCluesRequired": 0.42,
+      "TotalTime": 769925983,
+      "TotalCompleted": 349,
+      "TotalCluesRequired": 161
+    },
+    "6": {
+      "ID": 6,
+      "Name": "Toys - 23413",
+      "AverageTimeRemaining": 2111933,
+      "AverageCompletionRate": 0.91,
+      "AverageCluesRequired": 0.72,
+      "TotalTime": 730729045,
+      "TotalCompleted": 346,
+      "TotalCluesRequired": 272
+    },
+    "7": {
+      "ID": 7,
+      "Name": "Missing Letters in Alphabet - DIRT",
+      "AverageTimeRemaining": 2356211,
+      "AverageCompletionRate": 0.93,
+      "AverageCluesRequired": 0.17,
+      "TotalTime": 827030275,
+      "TotalCompleted": 351,
+      "TotalCluesRequired": 65
+    },
+    "8": {
+      "ID": 8,
+      "Name": "Clothes on Randy - GAME MASTER REMOTE TRIGGER",
+      "AverageTimeRemaining": 1918810,
+      "AverageCompletionRate": 0.92,
+      "AverageCluesRequired": 0.59,
+      "TotalTime": 669664690,
+      "TotalCompleted": 349,
+      "TotalCluesRequired": 224
+    },
+    "9": {
+      "ID": 9,
+      "Name": "Blacklight Stamp - FLICK",
+      "AverageTimeRemaining": 1661144,
+      "AverageCompletionRate": 0.52,
+      "AverageCluesRequired": 0.18,
+      "TotalTime": 327245438,
+      "TotalCompleted": 197,
+      "TotalCluesRequired": 67
+    },
+    "10": {
+      "ID": 10,
+      "Name": "Tongue on Flagpole",
+      "AverageTimeRemaining": 1472584,
+      "AverageCompletionRate": 0.89,
+      "AverageCluesRequired": 0.25,
+      "TotalTime": 499206127,
+      "TotalCompleted": 339,
+      "TotalCluesRequired": 95
+    },
+    "11": {
+      "ID": 11,
+      "Name": "Align Tires and Translate - FUDGE",
+      "AverageTimeRemaining": 1323983,
+      "AverageCompletionRate": 0.85,
+      "AverageCluesRequired": 0.35,
+      "TotalTime": 428970695,
+      "TotalCompleted": 324,
+      "TotalCluesRequired": 132
+    },
+    "12": {
+      "ID": 12,
+      "Name": "Hats on Hooks - 1983",
+      "AverageTimeRemaining": 1182561,
+      "AverageCompletionRate": 0.81,
+      "AverageCluesRequired": 0.49,
+      "TotalTime": 363046470,
+      "TotalCompleted": 307,
+      "TotalCluesRequired": 186
+    },
+    "13": {
+      "ID": 13,
+      "Name": "STOCKING 1 - Furnace Puzzle",
+      "AverageTimeRemaining": 931490,
+      "AverageCompletionRate": 0.68,
+      "AverageCluesRequired": 0.36,
+      "TotalTime": 240324595,
+      "TotalCompleted": 258,
+      "TotalCluesRequired": 136
+    },
+    "14": {
+      "ID": 14,
+      "Name": "STOCKING 2 - Christmas Lights",
+      "AverageTimeRemaining": 860724,
+      "AverageCompletionRate": 0.6,
+      "AverageCluesRequired": 0.39,
+      "TotalTime": 195384419,
+      "TotalCompleted": 227,
+      "TotalCluesRequired": 148
+    },
+    "15": {
+      "ID": 15,
+      "Name": "STOCKING 3 - Telephone number hidden in magazine.",
+      "AverageTimeRemaining": 701570,
+      "AverageCompletionRate": 0.37,
+      "AverageCluesRequired": 0.27,
+      "TotalTime": 97518270,
+      "TotalCompleted": 139,
+      "TotalCluesRequired": 103
+    },
+    "16": {
+      "ID": 16,
+      "Name": "Crossword Puzzle - VICTOR, into Directional Lock",
+      "AverageTimeRemaining": 807181,
+      "AverageCompletionRate": 0.27,
+      "AverageCluesRequired": 0.21,
+      "TotalTime": 83139661,
+      "TotalCompleted": 103,
+      "TotalCluesRequired": 78
+    },
+    "17": {
+      "ID": 17,
+      "Name": "STOCKING 4 - Radio - Set clock to 6:45, translate message into OVLTN",
+      "AverageTimeRemaining": 604993,
+      "AverageCompletionRate": 0.21,
+      "AverageCluesRequired": 0.15,
+      "TotalTime": 48399492,
+      "TotalCompleted": 80,
+      "TotalCluesRequired": 56
+    },
+    "18": {
+      "ID": 18,
+      "Name": "All 4 Stockings Hung - GAME MASTER REMOTE TRIGGER",
+      "AverageTimeRemaining": 407187,
+      "AverageCompletionRate": 0.04,
+      "AverageCluesRequired": 0.07,
+      "TotalTime": 6515001,
+      "TotalCompleted": 16,
+      "TotalCluesRequired": 27
+    }
+  }
+}

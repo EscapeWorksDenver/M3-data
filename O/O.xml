@@ -1,0 +1,617 @@
+<story>
+	<id>O</id>
+	<name>Outbreak</name>
+	<description>An experimental virus created in the 1990s is turning ordinary people into bloodthirsty zombies. You have located the lab (which has been sealed shut for 25 years). You and your team must find the antidote before you are contaminated by the virus and turn into zombies yourselves!</description>
+	<active>true</active>
+	<type>Standard</type>
+	<color>0 0 0 255</color>
+	<scoring>Time</scoring>
+	<timebonus>0</timebonus>
+	<duration>60</duration>
+	<players>8</players>
+	<difficulty>1</difficulty>
+	<teamname>Scientists</teamname>
+	<chime ontext="true" onimage="true" onaudio="false" onvideo="false">stories/O/heartmonitor-OBSound.mp3</chime>
+	<audioducking>true</audioducking>
+	<externalid />
+	<marquee>stories/O/BACKGROUND.jpg</marquee>
+	<poster />
+	<styleinfo>
+		<base>standard</base>
+		<basecolor>0 0 0 255</basecolor>
+		<orientation>1</orientation>
+		<background>stories/O/ab1d037b-e70d-4db2-9954-fad4a39ce9f3_1140x641.jpg</background>
+		<backgroundlinkedtotimer>true</backgroundlinkedtotimer>
+		<clueicon>images/clue.png</clueicon>
+		<clueusedicon>images/clue-used.png</clueusedicon>
+		<timer hidewhenidle="false" hidewhenzero="false" font="Shlop" fontbold="false" fontitalic="false" fontshadow="true" left="355" top="0" size="480" color="232 8 0 255" override="true" visible="true" />
+		<messages font="Chiller" fontbold="false" fontitalic="false" fontshadow="false" left="0" top="0" size="40" color="255 255 255 255" override="false" visible="true" />
+		<clues left="0" top="0" override="false" visible="true" />
+		<customcss />
+		<customhtml />
+	</styleinfo>
+	<prologue>false</prologue>
+	<epilogue>false</epilogue>
+	<sound-levels>
+		<level id="Master" base="1" level="1" mute="false" />
+		<level id="Chimes" base="1" level="1" mute="false" />
+		<level id="Sounds" base="1" level="1" mute="false" />
+		<level id="Videos" base="1" level="1" mute="false" />
+		<level id="Music" base="0.55" level="0.55" mute="false" />
+		<level id="Backgrounds" base="1" level="1" mute="false" />
+	</sound-levels>
+	<clues total="0">
+		<penalty>None</penalty>
+		<penaltyvalue>0</penaltyvalue>
+		<bonus>None</bonus>
+		<bonusvalue>0</bonusvalue>
+		<duration>120</duration>
+	</clues>
+	<rooms />
+	<languages>
+		<language id="0">English</language>
+		<language id="1" />
+		<language id="2" />
+		<language id="3" />
+		<language id="4" />
+	</languages>
+	<music>
+		<track name="Background music" source="stories/O/Zombie_apocalypse_background_music_-_Walking_Dead.mp3" volume="0.7" />
+		<track name="OB SUCCESS" source="stories/O/SUCCESS.mp3" volume="0.5" />
+		<track name="OB FAIL" source="stories/O/Dark_Music_-_Death_Hymn FAIL.mp3" volume="0.73" />
+		<track name="DRUMS ON DOOR OPEN" source="stories/O/OutBreak Brief Drums - Door Open.mp3" volume="0.5" />
+		<track name="OB Scary Music after Door" source="stories/O/OutbreakScaryBackgroundAfterdoorOpen.mp3" volume="0.75" />
+	</music>
+	<requiredscreens />
+	<reset />
+	<devices>
+		<device id="5" type="Network" style="Device" channel="0" name="Outbreak-ACS Controller" host="192.168.0.101" protocol="TCP" localport="0" port="80" heartbeat="500" json="false" visible="true" commands="true">
+			<description>Controls puzzles in OB and ACS</description>
+			<command name="Release 2nd Drawer File" text="Release 2nd Drawer" code="?SWITCH4=2" />
+			<command name="Release Top File Drawer" text="Release Top Drawer" code="?SWITCH5=2" />
+		</device>
+		<device id="6" type="MQTT" style="Device" channel="0" name="Red Start Button" topic="/dingtian/relay8816/out/i8" visible="true" commands="true">
+			<description>Start Button outside game</description>
+		</device>
+		<device id="7" type="MQTT" style="Device" channel="0" name="Red Button Light" topic="" visible="true" commands="true">
+			<description>Test Red Button Light</description>
+			<command name="Red Btn Light On" text="/dingtian/relay8816/in/r8" code="ON" />
+			<command name="Red Btn Light Off" text="/dingtian/relay8816/in/r8" code="OFF" />
+		</device>
+		<device id="8" type="MQTT" style="Device" channel="0" name="Antidote Vial in Holder - End Game" topic="/dingtian/relay8816/out/i7" visible="true" commands="true">
+			<description>End of Game with Antidote in Vial</description>
+		</device>
+		<device id="9" type="MQTT" style="Device" channel="0" name="Door Alarm" topic="/dingtian/relay8816/out/i6" visible="true" commands="true">
+			<description>Door Alarm</description>
+		</device>
+		<device id="13" type="MQTT" style="OpenClose" channel="0" name="MIddle Door ON=CLOSED" topic="/dingtian/relay8816/out/i5" visible="true" commands="true">
+			<description>ON is closed, OFF is Open</description>
+		</device>
+	</devices>
+	<objectives>
+		<objective id="1" rank="Primary" name="Posters - &quot;Under the Table&quot; - Find Key to Desk Drawers" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="1" name="Missing Blood" type="Text" source="" score="0" weight="1">
+					<text>Take a closer look at those posters on the locker... Can you build a phrase from the letters NOT covered in blood?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="2" name="Starting Nudge" type="Text" source="" score="0" weight="1">
+					<text>The scientists loved their movies and games.. take a closer look at the posters they kept up!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="35" name="Spell it out" type="Text" source="" score="0" weight="1">
+					<text>U - NDER
+T - HE
+TABLE</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="37" name="Where's the key?" type="Text" source="" score="0" weight="1">
+					<text>Take a second look at the table in the room... can you find a key hanging underneath?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="38" name="Check the order" type="Text" source="" score="0" weight="1">
+					<text>You're on the right track here, but put those letters in order by referencing the Posters from Top to Bottom!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="13" rank="Primary" name="Lockbox - FeAr 2618" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="71" name="Start" type="Text" source="" score="0" weight="1">
+					<text>I *FeAr* that Iron and Argon aren't powerful enough to open the handheld lockbox...</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="77" name="Element Assist" type="Text" source="" score="0" weight="1">
+					<text>Look for Iron and Argon on the periodic table. Pull the atomic numbers off each of them to form a 4 digit code!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="81" name="Reset" type="Text" source="" score="0" weight="1">
+					<text>Clear the lockbox by pushing on down on the bottom switch, then you can make your next attempt!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="82" name="Find the Lockbox Cover" type="Text" source="" score="0" weight="1">
+					<text>Did you see the front of the cover on that handheld lockbox? Those letters could be elemental to your escape!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="2" rank="Primary" name="Notecard Puzzle- Up Down Left B Start and Game Boy- 3164" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="4" name="Notecards" type="Text" source="" score="0" weight="1">
+					<text>The scientists hid some notecards away- align them correctly to read their message!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="26" name="Cheat Code" type="Text" source="" score="0" weight="1">
+					<text>Up Down Left B Start... Where can you use that *cheat code*?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="31" name="Input Assist" type="Text" source="" score="0" weight="1">
+					<text>Make sure to use that cheat code on an image when playing with the Game Boy!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="54" name="Extra Help" type="Text" source="" score="0" weight="1">
+					<text>Is the game boy turned on? If you can't see anything, use the contrast wheel on the left side! Just make sure you are looking at a picture when you input the cheat buttons, not a text field.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="55" name="ALL with Volume" type="Text" source="" score="0" weight="1">
+					<text>Once you input the game boy buttons correctly on an image (not with text showing), you will be pushed to winning slides that will reveal your next code. It's helpful to know this when you have the volume turned up all the way.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="5" rank="Primary" name="Clean Room Door - 3147" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="63" name="Just try" type="Text" source="" score="0" weight="1">
+					<text>Try typing the names of each time zone into the computer- Mountain Time, not MT! Etc.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="64" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>Each strain of the virus is unique- which strain matches to which time zone? The computer may know more... 4 sets of roman numerals will give you 4 digits for a code.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="65" name="Assist more" type="Text" source="" score="0" weight="1">
+					<text>Pacific time says something about how the 'head' of the virus strain is the largest- the piece with the largest shape atop the strands will go in the pacific time slot! Continue this pattern for your other three pieces.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="6" rank="Primary" name="Scanner Cabinet - SANDY" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="9" name="Picture" type="Text" source="" score="0" weight="1">
+					<text>Alan loved his family, keeping their photo close by. What were their names, again?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="22" name="Nickname" type="Text" source="" score="0" weight="1">
+					<text>Sandra is unfortunately too long... Maybe Alan had a nickname for his wife?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="33" name="How-To" type="Text" source="" score="0" weight="1">
+					<text>Make sure you line that code up with the front of the lock, in line with the middle.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="70" name="No flashlights" type="Text" source="" score="0" weight="1">
+					<text>Please remember there is no phone use allowed in the game.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="7" rank="Primary" name="Memory Puzzle" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="10" name="Breakdown" type="Text" source="" score="0" weight="1">
+					<text>It looks like the scientists installed a memory game in the clean room to keep their minds sharp...GREEN must be the code. RED is the reset. It seems BLUE is the countdown to input the code.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="24" name="Random code" type="Text" source="" score="0" weight="1">
+					<text>The light up puzzle in the second room has a random code each cycle. It will flash the code to you in GREEN then start a countdown in BLUE, which is when you input the code that was flashed to you.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="8" rank="Primary" name="Breaker Box - R1 L2 R2 L3 L4" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="11" name="Surge Protector" type="Text" source="" score="0" weight="1">
+					<text>Why would anyone hide a cordless surge protector in that box? Does it hold some secret inside?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="12" name="Finger Scanner" type="Text" source="" score="0" weight="1">
+					<text>The scanner in the clean room will accept a fingerprint... But, you'll need a partner to find the secrets hidden on the walls.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="13" name="Lights" type="Text" source="" score="0" weight="1">
+					<text>It's easier to see those clues on the wall with the LIGHTS OFF! Try the switch by the escape door!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="14" name="On or Off?" type="Text" source="" score="0" weight="1">
+					<text>Make sure to have the correct fuses switched to "ON"!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="56" name="Hand Pun" type="Text" source="" score="0" weight="1">
+					<text>That body in the second room has something you'll need... Just be sure to *hand*le it with care!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="87" name="Percy's Fav" type="Text" source="" score="0" weight="1">
+					<text>It looks like that scanner needs a fingerprint. Is there anyone else there that can lend you a hand?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="9" rank="Primary" name="Switch Cabinet - U D D / U D U" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="16" name="Tic Tac Toe" type="Text" source="" score="0" weight="1">
+					<text>Now these switches are as simple as Tic Tac Toe!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="88" name="Symbols" type="Text" source="" score="0" weight="1">
+					<text>Look at the symbols next to that switch board! 6 symbols for each switch!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="89" name="Breakdown" type="Text" source="" score="0" weight="1">
+					<text>Match the symbols to the corresponding placements on the Tic Tac Toe board. The arrow will tell you the direction to move the switch!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="90" name="Fools" type="Text" source="" score="0" weight="1">
+					<text>If the first switch matches the top left of the board, the first switch will go up!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="10" rank="Primary" name="Top File - B R G Y 2318" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="17" name="Reflect Again" type="Text" source="" score="0" weight="1">
+					<text>In order to find your true colors, you'll need to REFLECT once more for the hint hidden inside...</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="29" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>Close that drawer most of the way to see your next hidden clue! (With the mirror inside)</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="12" rank="Primary" name="Final Phrase - Open the Safe - 4679113A" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="42" name="Ask Barbara" type="Text" source="" score="0" weight="1">
+					<text>Barbara has been very helpful to the scientists.. Maybe you could type out a question on the vaccine?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="44" name="Final Phrase" type="Text" source="" score="0" weight="1">
+					<text>"The world can finally start over." Have you found all of the books? A couple might be hidden in plain sight...</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="57" name="Notebook" type="Text" source="" score="0" weight="1">
+					<text>That laboratory notebook is oddly suspicious... There isn't a clue on the binding, but could there be something useful inside??</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="11" rank="Primary" name="Disarm Alarm - Place the Vial" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="18" name="Final Step" type="Text" source="" score="0" weight="1">
+					<text>You've found the cure, but you must insert it into the stabilizing unit!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="50" name="(Sounds alarm)" type="Audio" source="stories/O/Alarm Buzzer OB.mp3" score="0" weight="1">
+					<text />
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+	</objectives>
+	<events>
+		<event id="2" name="Running" type="Single" mode="All" color="0 0 255 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Running" value="0" />
+			</conditions>
+			<actions>
+				<action type="SetMusic" value="Background music" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+				<action type="Device" deviceid="7" command="Red Btn Light On" level="0" />
+			</actions>
+		</event>
+		<event id="3" name="Success" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Ended" value="0" />
+				<condition type="Success" name="" operator="=" tag="true" value="0" />
+			</conditions>
+			<actions>
+				<action type="SetBackground" screen="Countdown" channel="0" source="stories/O/depositphotos_119006510-stock-photo-man-running-away-from-zombies.jpg" />
+				<action type="SendMessage" format="Text" screen="Countdown" channel="0" duration="40000" source="0" volume="1" loop="false" alert="false">You escaped with the cure!</action>
+				<action type="MusicStop" screen="Countdown" channel="0" />
+				<action type="SetMusic" value="OB SUCCESS" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+				<action type="Delay" value="40000" />
+				<action type="MusicStop" screen="Countdown" channel="0" />
+				<action type="Device" deviceid="7" command="Red Btn Light Off" level="0" />
+			</actions>
+		</event>
+		<event id="4" name="Fail" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Ended" value="0" />
+				<condition type="Success" name="" operator="=" tag="false" value="0" />
+			</conditions>
+			<actions>
+				<action type="SetBackground" screen="Countdown" channel="0" source="stories/O/FAILED.jpg" />
+				<action type="SendMessage" format="Text" screen="Countdown" channel="0" duration="40000" source="0" volume="1" loop="false" alert="false">You have been incinerated!</action>
+				<action type="MusicStop" screen="Countdown" channel="0" />
+				<action type="SetMusic" value="OB FAIL" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+				<action type="Delay" value="30000" />
+				<action type="MusicStop" screen="Countdown" channel="0" />
+				<action type="Device" deviceid="7" command="Red Btn Light Off" level="0" />
+			</actions>
+		</event>
+		<event id="5" name="Start Game From Button" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="DeviceStatusCode" name="" operator="=" tag="ON" value="6" />
+				<condition type="StoryState" name="" operator="=" tag="Idle" value="0" />
+				<condition type="DeviceStatusCode" name="" operator="=" tag="ON" value="13" />
+			</conditions>
+			<actions>
+				<action type="StoryState" state="Running" />
+				<action type="Device" deviceid="7" command="Red Btn Light On" level="0" />
+				<action type="Delay" value="500" />
+				<action type="Device" deviceid="7" command="Red Btn Light Off" level="0" />
+				<action type="Delay" value="500" />
+				<action type="Device" deviceid="7" command="Red Btn Light On" level="0" />
+				<action type="Delay" value="500" />
+				<action type="Device" deviceid="7" command="Red Btn Light Off" level="0" />
+				<action type="Delay" value="500" />
+				<action type="Device" deviceid="7" command="Red Btn Light On" level="0" />
+			</actions>
+		</event>
+		<event id="6" name="Blink the Light when button pressed" type="Recurring" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="DeviceStatusCode" name="" operator="=" tag="ON" value="6" />
+				<condition type="StoryState" name="" operator="=" tag="Running" value="0" />
+			</conditions>
+			<actions>
+				<action type="Device" deviceid="7" command="Red Btn Light Off" level="0" />
+				<action type="Delay" value="1000" />
+				<action type="Device" deviceid="7" command="Red Btn Light On" level="0" />
+				<action type="Delay" value="5" />
+				<action type="Device" deviceid="7" command="Red Btn Light On" level="0" />
+			</actions>
+		</event>
+		<event id="7" name="Red Button Off Game Not Running" type="Recurring" mode="Any" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Ended" value="0" />
+				<condition type="StoryState" name="" operator="=" tag="Resetting" value="0" />
+				<condition type="StoryState" name="" operator="=" tag="Offline" value="0" />
+				<condition type="StoryState" name="" operator="=" tag="Idle" value="0" />
+			</conditions>
+			<actions>
+				<action type="Device" deviceid="7" command="Red Btn Light Off" level="0" />
+			</actions>
+		</event>
+		<event id="8" name="Restart Timer on Button Press (game ended)" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="DeviceStatusCode" name="" operator="=" tag="ON" value="6" />
+				<condition type="StoryState" name="" operator="=" tag="Ended" value="0" />
+			</conditions>
+			<actions>
+				<action type="StoryState" state="Resetting" />
+				<action type="MusicStop" screen="Countdown" channel="0" />
+				<action type="Device" deviceid="7" command="Red Btn Light On" level="0" />
+				<action type="Delay" value="2000" />
+				<action type="Device" deviceid="7" command="Red Btn Light Off" level="0" />
+			</actions>
+		</event>
+		<event id="9" name="Solve Game by Putting Vial in Holder" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Running" value="0" />
+				<condition type="DeviceStatusCode" name="" operator="=" tag="ON" value="8" />
+				<condition type="DeviceStatusCode" name="" operator="=" tag="OFF" value="9" />
+				<condition type="TimeRemaining" name="" operator="&lt;" tag="" value="59.91667" />
+			</conditions>
+			<actions>
+				<action type="EndSessionSuccess" value="" />
+			</actions>
+		</event>
+		<event id="10" name="Sound Alarm When Door Opened game on" type="Recurring" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Running" value="0" />
+				<condition type="DeviceStatusCode" name="" operator="=" tag="OFF" value="9" />
+				<condition type="Variable" name="Door Alarm Sounding" operator="=" tag="0" value="0" />
+			</conditions>
+			<actions>
+				<action type="SendMessage" format="Audio" screen="Countdown" channel="0" duration="120000" source="stories/O/Alarm Buzzer OB.mp3" volume="1" loop="false" alert="false" />
+				<action type="SetVariable" name="Door Alarm Sounding" value="1" />
+			</actions>
+		</event>
+		<event id="11" name="Stop Alarm Door Closed" type="Recurring" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="Variable" name="Door Alarm Sounding" operator="=" tag="1" value="0" />
+				<condition type="DeviceStatusCode" name="" operator="=" tag="OFF" value="9" />
+			</conditions>
+			<actions>
+				<action type="SetVariable" name="Door Alarm Sounding" value="0" />
+				<action type="SoundStop" screen="Countdown" channel="0" source="" />
+			</actions>
+		</event>
+		<event id="12" name="Scary Music 2nd Door Opened" type="Single" mode="All" color="186 38 0 255" gmvisible="true" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Running" value="0" />
+				<condition type="DeviceStatusCode" name="" operator="=" tag="OFF" value="13" />
+			</conditions>
+			<actions>
+				<action type="CompleteObjective" id="5" />
+				<action type="MusicStop" screen="Countdown" channel="0" />
+				<action type="SetMusic" value="DRUMS ON DOOR OPEN" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+				<action type="CompleteObjective" id="4" />
+				<action type="Delay" value="7000" />
+				<action type="MusicStop" screen="Countdown" channel="0" />
+				<action type="SetMusic" value="OB Scary Music after Door" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+			</actions>
+		</event>
+		<event id="13" name="Don't start game button when middle door open" type="Recurring" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="DeviceStatusCode" name="" operator="=" tag="OFF" value="13" />
+				<condition type="DeviceStatusCode" name="" operator="=" tag="ON" value="6" />
+				<condition type="StoryState" name="" operator="=" tag="Idle" value="0" />
+			</conditions>
+			<actions>
+				<action type="Device" deviceid="7" command="Red Btn Light On" level="0" />
+				<action type="Delay" value="100" />
+				<action type="Device" deviceid="7" command="Red Btn Light Off" level="0" />
+				<action type="Delay" value="100" />
+				<action type="Device" deviceid="7" command="Red Btn Light On" level="0" />
+				<action type="Delay" value="100" />
+				<action type="Device" deviceid="7" command="Red Btn Light Off" level="0" />
+				<action type="Delay" value="100" />
+				<action type="Device" deviceid="7" command="Red Btn Light On" level="0" />
+				<action type="Delay" value="100" />
+				<action type="Device" deviceid="7" command="Red Btn Light Off" level="0" />
+			</actions>
+		</event>
+		<event id="14" name="Music Change - 2nd door" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Running" value="0" />
+				<condition type="ObjectiveComplete" name="" operator="=" tag="true" value="5" />
+			</conditions>
+			<actions>
+				<action type="MusicStop" screen="Countdown" channel="0" />
+				<action type="SetMusic" value="DRUMS ON DOOR OPEN" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+				<action type="Delay" value="7000" />
+				<action type="MusicStop" screen="Countdown" channel="0" />
+				<action type="SetMusic" value="OB Scary Music after Door" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+			</actions>
+		</event>
+	</events>
+	<values>
+		<value name="Door Alarm Sounding">0</value>
+	</values>
+</story>

@@ -1,0 +1,155 @@
+{
+  "StoryID": "SHATS",
+  "TotalSessions": 249,
+  "TotalPlayers": 4,
+  "TotalSuccess": 76,
+  "SuccessRate": 0.31,
+  "AverageCluesRemaining": 1,
+  "AverageCluesUsed": 9,
+  "AveragePlayers": 1,
+  "AverageScore": 0,
+  "AverageTimeRemaining": 111197,
+  "AverageTimeUsed": 0,
+  "Objectives": {
+    "1": {
+      "ID": 1,
+      "Name": "Jukebox Puzzle - BROADCAST",
+      "AverageTimeRemaining": 2913500,
+      "AverageCompletionRate": 0.98,
+      "AverageCluesRequired": 0.22,
+      "TotalTime": 707980614,
+      "TotalCompleted": 243,
+      "TotalCluesRequired": 56
+    },
+    "2": {
+      "ID": 2,
+      "Name": "Giant of California - 434",
+      "AverageTimeRemaining": 2695773,
+      "AverageCompletionRate": 0.54,
+      "AverageCluesRequired": 0.27,
+      "TotalTime": 361233638,
+      "TotalCompleted": 134,
+      "TotalCluesRequired": 68
+    },
+    "3": {
+      "ID": 3,
+      "Name": "Flower Poem and Book - 439-5768",
+      "AverageTimeRemaining": 2286978,
+      "AverageCompletionRate": 0.98,
+      "AverageCluesRequired": 0.84,
+      "TotalTime": 558022762,
+      "TotalCompleted": 244,
+      "TotalCluesRequired": 209
+    },
+    "4": {
+      "ID": 4,
+      "Name": "Knocks",
+      "AverageTimeRemaining": 2276528,
+      "AverageCompletionRate": 0.98,
+      "AverageCluesRequired": 0.62,
+      "TotalTime": 557749361,
+      "TotalCompleted": 245,
+      "TotalCluesRequired": 154
+    },
+    "5": {
+      "ID": 5,
+      "Name": "Fish from a Barrel...",
+      "AverageTimeRemaining": 1554149,
+      "AverageCompletionRate": 0.95,
+      "AverageCluesRequired": 0.75,
+      "TotalTime": 368333411,
+      "TotalCompleted": 237,
+      "TotalCluesRequired": 186
+    },
+    "6": {
+      "ID": 6,
+      "Name": "Gears",
+      "AverageTimeRemaining": 974622,
+      "AverageCompletionRate": 0.29,
+      "AverageCluesRequired": 0.37,
+      "TotalTime": 70172787,
+      "TotalCompleted": 72,
+      "TotalCluesRequired": 93
+    },
+    "7": {
+      "ID": 7,
+      "Name": "Drinks",
+      "AverageTimeRemaining": 749175,
+      "AverageCompletionRate": 0.8,
+      "AverageCluesRequired": 0.85,
+      "TotalTime": 148336826,
+      "TotalCompleted": 198,
+      "TotalCluesRequired": 212
+    },
+    "9": {
+      "ID": 9,
+      "Name": "Find Four Letters - REST",
+      "AverageTimeRemaining": 413540,
+      "AverageCompletionRate": 0.48,
+      "AverageCluesRequired": 0.37,
+      "TotalTime": 49624801,
+      "TotalCompleted": 120,
+      "TotalCluesRequired": 93
+    },
+    "10": {
+      "ID": 10,
+      "Name": "Table",
+      "AverageTimeRemaining": 287262,
+      "AverageCompletionRate": 0.32,
+      "AverageCluesRequired": 0.36,
+      "TotalTime": 22980978,
+      "TotalCompleted": 80,
+      "TotalCluesRequired": 90
+    },
+    "11": {
+      "ID": 11,
+      "Name": "Bootlegger's Final Route",
+      "AverageTimeRemaining": 174725,
+      "AverageCompletionRate": 0.2,
+      "AverageCluesRequired": 0.14,
+      "TotalTime": 8910989,
+      "TotalCompleted": 51,
+      "TotalCluesRequired": 34
+    },
+    "12": {
+      "ID": 12,
+      "Name": "VICTORY",
+      "AverageTimeRemaining": 316071,
+      "AverageCompletionRate": 0.02,
+      "AverageCluesRequired": 0.0,
+      "TotalTime": 1580359,
+      "TotalCompleted": 5,
+      "TotalCluesRequired": 0
+    },
+    "13": {
+      "ID": 13,
+      "Name": "Dartboard",
+      "AverageTimeRemaining": 1965034,
+      "AverageCompletionRate": 0.56,
+      "AverageCluesRequired": 0.04,
+      "TotalTime": 275104878,
+      "TotalCompleted": 140,
+      "TotalCluesRequired": 9
+    },
+    "14": {
+      "ID": 14,
+      "Name": "Gears - Tarot (3609)",
+      "AverageTimeRemaining": 982441,
+      "AverageCompletionRate": 0.51,
+      "AverageCluesRequired": 0.37,
+      "TotalTime": 123787643,
+      "TotalCompleted": 126,
+      "TotalCluesRequired": 93
+    },
+    "15": {
+      "ID": 15,
+      "Name": "Unlocking Spell - 2875",
+      "AverageTimeRemaining": 919795,
+      "AverageCompletionRate": 0.5,
+      "AverageCluesRequired": 0.26,
+      "TotalTime": 114054702,
+      "TotalCompleted": 124,
+      "TotalCluesRequired": 64
+    }
+  }
+}

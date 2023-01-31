@@ -1,0 +1,559 @@
+<story>
+	<id>ET</id>
+	<name>Egyptian Tomb</name>
+	<description>You and your team are expert archaeologists- Top of your field! You've been funded to go on a mission to find an explorer who went missing in the late 1940's. I don't remember his name at the moment but it roughly translates in the Babylonian to Schmindiana Schmones...Anyways, you and your team trace his last known whereabouts to a long forgotten tomb in Egypt. You get inside and suddenly the entrance way collapses and crumbles in on itself. You figure you have 1 hour to find out what happened to that explorer and find another way out.</description>
+	<active>true</active>
+	<type>Standard</type>
+	<color>0 0 0 255</color>
+	<scoring>Time</scoring>
+	<timebonus>0</timebonus>
+	<duration>60</duration>
+	<players>8</players>
+	<difficulty>1</difficulty>
+	<teamname>Archaeologists</teamname>
+	<chime ontext="true" onimage="true" onaudio="false" onvideo="false">stories/ET/linking_online-audio-converter.com.mp3</chime>
+	<audioducking>true</audioducking>
+	<externalid />
+	<marquee>stories/ET/m3-marquee.jpg</marquee>
+	<poster>stories/ET/m3-poster.jpg</poster>
+	<styleinfo>
+		<base>standard</base>
+		<basecolor>0 0 0 255</basecolor>
+		<orientation>1</orientation>
+		<background>stories/ET/ET_Pyramids.jpg</background>
+		<backgroundlinkedtotimer>true</backgroundlinkedtotimer>
+		<clueicon>images/clue.png</clueicon>
+		<clueusedicon>images/clue-used.png</clueusedicon>
+		<timer hidewhenidle="false" hidewhenzero="false" font="" fontbold="false" fontitalic="false" fontshadow="false" left="0" top="0" size="480" color="255 255 255 255" override="false" visible="true" />
+		<messages font="Sebastian" fontbold="false" fontitalic="false" fontshadow="false" left="0" top="0" size="40" color="255 255 255 255" override="false" visible="true" />
+		<clues left="0" top="0" override="false" visible="true" />
+		<customcss />
+		<customhtml />
+	</styleinfo>
+	<prologue>false</prologue>
+	<epilogue>false</epilogue>
+	<sound-levels>
+		<level id="Master" base="1" level="1" mute="false" />
+		<level id="Chimes" base="1" level="1" mute="false" />
+		<level id="Sounds" base="1" level="1" mute="false" />
+		<level id="Videos" base="1" level="1" mute="false" />
+		<level id="Music" base="1" level="1" mute="false" />
+		<level id="Backgrounds" base="1" level="1" mute="false" />
+	</sound-levels>
+	<clues total="0">
+		<penalty>None</penalty>
+		<penaltyvalue>0</penaltyvalue>
+		<bonus>None</bonus>
+		<bonusvalue>0</bonusvalue>
+		<duration>120</duration>
+	</clues>
+	<rooms />
+	<languages>
+		<language id="0">English</language>
+		<language id="1" />
+		<language id="2" />
+		<language id="3" />
+		<language id="4" />
+	</languages>
+	<music>
+		<track name="ET Fail" source="stories/ET/The_Map_Room_Dawn.mp3" volume="0.5" />
+		<track name="ET Success" source="stories/ET/The_Raiders_March_Original_Version_-_John_Williams.mp3" volume="0.35" />
+		<track name="MainTrack" source="stories/ET/egyptost.mp3" volume="0.97" />
+		<track name="arktheme" source="stories/ET/Egyptthirdarea.mp3" volume="0.65" />
+	</music>
+	<requiredscreens />
+	<reset />
+	<devices>
+		<device id="14" type="MQTT" style="Device" channel="0" name="Red Button Light" topic="" visible="true" commands="true">
+			<description>Red Button Light for Egyptian Tomb</description>
+			<command name="Red Btn Light On" text="/dingtian/relay4158/in/r4" code="ON" />
+			<command name="Red Btn Light Off" text="/dingtian/relay4158/in/r4" code="OFF" />
+		</device>
+		<device id="15" type="MQTT" style="Device" channel="0" name="Red Start Button" topic="/dingtian/relay4158/out/i4" visible="true" commands="true">
+			<description>Red Button for Starting Egyptian Tomb</description>
+		</device>
+	</devices>
+	<objectives>
+		<objective id="1" rank="Primary" name="Maze - Retrieve the Hook" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="1" name="Begin Here" type="Text" source="" score="0" weight="1">
+					<text>Focus on the Maze in the back of the room. It contains an important tool you'll need to begin your quest!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="67" name="OST Override" type="Audio" source="stories/ET/egyptost.mp3" score="0" weight="1">
+					<text />
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="2" rank="Primary" name="Recess - Grab the Satchel" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="2" name="Construct" type="Text" source="" score="0" weight="1">
+					<text>Is there something in that recess? Can you construct something to extend your reach?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="33" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>Use the hook from the maze and go fishing for your next clue!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="46" name="Journal Key" type="Text" source="" score="0" weight="1">
+					<text>That explorer's writing is chicken-scratch! Maybe he left something useful in that journal, like a key...</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="3" rank="Primary" name="Spin Fish Spin - Get the Door Key" event="" score="0">
+			<narrative>The answer to that golden fish box is written on a wall!</narrative>
+			<clues>
+				<clue id="7" name="Decode the Clue" type="Text" source="" score="0" weight="1">
+					<text>The answer to that golden fish box is written on a wall!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="35" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>Double check that message to the left of the maze! It helps to decode it exactly as its written.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="36" name="Breakdown" type="Text" source="" score="0" weight="1">
+					<text>Spin Fish Spin! It works best like a top, on a flat surface!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="66" name="Percy's impatient" type="Text" source="" score="0" weight="1">
+					<text>Have you flipped through the entire journal? It will be the KEY to moving forward.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="68" name="Further Help" type="Text" source="" score="0" weight="1">
+					<text>Spin the entire box - quick! It's easier if the box is upside down.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="4" rank="Primary" name="Dial Box - 1 to 1, 2 to 2, 3 to 3" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="3" name="Pedestals" type="Text" source="" score="0" weight="1">
+					<text>3 golden pedestals, 3 dials... What do the pedestals say?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="5" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>1 to 1, 2 to 2, 3 to 3...Then simply lift the lid!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="6" name="Stones" type="Text" source="" score="0" weight="1">
+					<text>A bonus hint - Those stones won't help you here!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="40" name="Truly Evil" type="Text" source="" score="0" weight="0">
+					<text>The stones do nothing... yet!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="43" name="Extra Extra Assist" type="Text" source="" score="0" weight="1">
+					<text>Point the 1 dial to the ONE pedestal, etc... Align all three dials to open the box!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="5" rank="Primary" name="Table - S2W1-Double Triangle, E1S1-Beetle, N2E1-Pyramid, W2N1-Snake" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="53" name="NO NO SUN" type="Text" source="" score="0" weight="1">
+					<text>Please do not add pressure, push on, or stick anything into that center square on the table! Thank you :)</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="54" name="Sun Directions" type="Text" source="" score="0" weight="1">
+					<text>4 SUN directions on the walls will lead you to 4 symbols carved into the top of the table.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="55" name="Blacklight" type="Text" source="" score="0" weight="1">
+					<text>Be sure to shed blacklight on the walls to orient yourself.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="56" name="BOTH" type="Text" source="" score="0" weight="1">
+					<text>4 SUN directions on the walls will lead you to 4 symbols carved into the top of the table. Be sure to shed blacklight on the walls to orient yourself.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="57" name="Assist After Blacklight" type="Text" source="" score="0" weight="1">
+					<text>Now that you've found the compass directions, use the 4 paths written under the SUNS to find 4 symbols on the tabletop (the sun in the center is your guide).</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="58" name="Grid View" type="Text" source="" score="0" weight="1">
+					<text>View the table as a grid... Follow the pathways starting at the sun in the center of the table, moving outward to find your symbols.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="59" name="E1 S1" type="Text" source="" score="0" weight="1">
+					<text>"Sun, E 1 S 1" = Start at the sun in the center. Go east 1 symbol, then south 1 symbol to arrive at the beetle symbol. Follow the other 3 pathways to find the other 3 symbols. Always start at the sun.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="60" name="Table Explanation FULL" type="Text" source="" score="0" weight="1">
+					<text>4 sets of hieroglyphics beginning with a sun will lead you to 4 symbols on the tabletop. Scan walls with blacklight to find true north. View the tabletop as a grid - start from the sun in the center for each hieroglyphic set.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="61" name="Half Symbols" type="Text" source="" score="0" weight="1">
+					<text>S2W1 = Double Triangle
+E1S1 = Scarab Beetle
+N2E1 = ???
+W2N1 = ???</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="62" name="Answer" type="Text" source="" score="0" weight="1">
+					<text>Double Triangle, Beetle, Pyramid, Snake</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="63" name="Touch/Hold Vague" type="Text" source="" score="0" weight="1">
+					<text>If you have located all 4 symbols, don't forget what the longer message in the 2nd room told you.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="64" name="Touch/Hold Specific" type="Text" source="" score="0" weight="1">
+					<text>If you have located all 4 symbols, don't forget what was written on the walls... 4 hands, touch / hold.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="65" name="HANDS HELP" type="Text" source="" score="0" weight="1">
+					<text>4 symbols found on the tabletop... 4 hands holding those spots in place. Flat open palms, with items out of the way (and out of your hands).</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="6" rank="Primary" name="Pharaoh Door" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="13" name="Scarabs Order" type="Text" source="" score="0" weight="1">
+					<text>Be sure you have those scarabs in the right order. Inspect each one with your blacklight!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="7" rank="Primary" name="Open the Ark - Get the Mirror" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="14" name="Ark" type="Text" source="" score="0" weight="1">
+					<text>Do you DARE open the ark? It opens on a hinge, like a chest!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="41" name="Ark- if they are hip (that means cool)" type="Text" source="" score="0" weight="1">
+					<text>That ark opens on a hinge, like a chest! (It's not like the movie, your face won't melt off, promise.)</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="8" rank="Primary" name="Pharaoh's Riddle - The Letter E" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="26" name="Explorer" type="Text" source="" score="0" weight="1">
+					<text>Have you found the hint the explorer left you? They always kept it on their mind...</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="27" name="Explorer 2" type="Text" source="" score="0" weight="1">
+					<text>Have you found the hint the explorer left you? They always kept it on their mind...(It's answer is a single letter!)</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="28" name="Get to E" type="Text" source="" score="0" weight="1">
+					<text>The beginning of e-ternity, the end of tim-e and spac-e....</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="49" name="Pharaoh Riddle" type="Text" source="" score="0" weight="1">
+					<text>The answer to the pharaoh's riddle is a single letter, solve it to set your cipher dial in place! (3 = ?)</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="9" rank="Primary" name="Set the Cipher - 3=E" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="29" name="Set it Up" type="Text" source="" score="0" weight="1">
+					<text>Put that letter in the inner circle on the cipher, and align it with a '3' on the outer circle!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="30" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>The beginning of e-ternity, the end of tim-e and spac-e....Set the answer to '3' on the outer ring of the cipher!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="31" name="Assist 2" type="Text" source="" score="0" weight="1">
+					<text>Once your cipher is set, you can decode that clue you found on the wall back there!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="52" name="Both" type="Text" source="" score="0" weight="1">
+					<text>The beginning of e-ternity, the end of tim-e and spac-e....Set the answer to '3' on the outer ring of the cipher! Once your cipher is set, you can decode that clue you found on the wall back there!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="10" rank="Primary" name="Set the Pillar - Get the Laser" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="34" name="Use the Mirror" type="Text" source="" score="0" weight="1">
+					<text>Eye to Eye!!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="38" name="T Z 2 D O..." type="Text" source="" score="0" weight="1">
+					<text>Check the walls back there with your blacklight for a clue to decode with your cipher!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="45" name="T Z 2 D O explanation" type="Text" source="" score="0" weight="1">
+					<text>Use your blacklight to locate a hidden clue by the back door! If 3 = e... T = ? and Z = ?, etc. Then you can set your pillar symbols!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="50" name="Final Mercy" type="Text" source="" score="0" weight="1">
+					<text>If 3 = e ... What is T ? and Z ?, etc. Then you can set your pillar symbols to make your escape! HURRY, Explorers!!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="11" rank="Primary" name="Door Open" event="" score="0">
+			<narrative />
+			<clues />
+		</objective>
+	</objectives>
+	<events>
+		<event id="10" name="Success music" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Ended" value="0" />
+				<condition type="Success" name="" operator="=" tag="true" value="0" />
+			</conditions>
+			<actions>
+				<action type="MusicStop" screen="Countdown" channel="0" />
+				<action type="SetMusic" value="ET Success" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+				<action type="SetBackground" screen="Countdown" channel="0" source="stories/ET/Leaving_the_Tomb.jpg" />
+				<action type="SendMessage" format="Text" screen="Countdown" channel="0" duration="120000" source="0" volume="1" loop="false" alert="false">You have escaped the tomb!</action>
+				<action type="Delay" value="40000" />
+				<action type="MusicStop" screen="Countdown" channel="0" />
+			</actions>
+		</event>
+		<event id="11" name="Success" type="Single" mode="All" color="39 174 96 255" gmvisible="true" active="true">
+			<conditions>
+				<condition type="ObjectiveComplete" name="" operator="=" tag="true" value="11" />
+			</conditions>
+			<actions>
+				<action type="StoryState" state="Ended" />
+			</actions>
+		</event>
+		<event id="2" name="Fail" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Ended" value="0" />
+				<condition type="Success" name="" operator="=" tag="false" value="0" />
+			</conditions>
+			<actions>
+				<action type="SetBackground" screen="Countdown" channel="0" source="stories/ET/ET_Lose_-_hand_out_of_sand.jpg" />
+				<action type="SendMessage" format="Text" screen="Countdown" channel="0" duration="40000" source="0" volume="1" loop="false" alert="false">You have been buried alive with the pharaohs!</action>
+				<action type="SetMusic" value="ET Fail" screen="Countdown" channel="0" volume="1" />
+				<action type="Delay" value="30000" />
+				<action type="MusicStop" screen="Countdown" channel="0" />
+			</actions>
+		</event>
+		<event id="3" name="Running" type="Single" mode="All" color="0 0 255 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Running" value="0" />
+			</conditions>
+			<actions>
+				<action type="SetMusic" value="MainTrack" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+				<action type="Device" deviceid="14" command="Red Btn Light On" level="0" />
+			</actions>
+		</event>
+		<event id="4" name="thirdroomost" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="ObjectiveComplete" name="" operator="=" tag="true" value="6" />
+			</conditions>
+			<actions>
+				<action type="MusicStop" screen="Countdown" channel="0" />
+				<action type="SetMusic" value="arktheme" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+			</actions>
+		</event>
+		<event id="6" name="Start Game From Button" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Idle" value="0" />
+				<condition type="DeviceStatusCode" name="" operator="=" tag="ON" value="15" />
+			</conditions>
+			<actions>
+				<action type="StoryState" state="Running" />
+				<action type="Device" deviceid="14" command="Red Btn Light On" level="0" />
+				<action type="Delay" value="1000" />
+				<action type="Device" deviceid="14" command="Red Btn Light Off" level="0" />
+				<action type="Delay" value="1000" />
+				<action type="Device" deviceid="14" command="Red Btn Light On" level="0" />
+				<action type="Delay" value="1000" />
+				<action type="Device" deviceid="14" command="Red Btn Light Off" level="0" />
+				<action type="Delay" value="1000" />
+				<action type="Device" deviceid="14" command="Red Btn Light On" level="0" />
+			</actions>
+		</event>
+		<event id="7" name="Blink Light When Button Pressed" type="Recurring" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Running" value="0" />
+				<condition type="DeviceStatusCode" name="" operator="=" tag="ON" value="15" />
+			</conditions>
+			<actions>
+				<action type="Device" deviceid="14" command="Red Btn Light Off" level="0" />
+				<action type="Delay" value="1000" />
+				<action type="Device" deviceid="14" command="Red Btn Light On" level="0" />
+			</actions>
+		</event>
+		<event id="8" name="Light Off Conditions (game not playing)" type="Single" mode="Any" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Ended" value="0" />
+				<condition type="StoryState" name="" operator="=" tag="Idle" value="0" />
+				<condition type="StoryState" name="" operator="=" tag="Offline" value="0" />
+				<condition type="StoryState" name="" operator="=" tag="Resetting" value="0" />
+			</conditions>
+			<actions>
+				<action type="Device" deviceid="14" command="Red Btn Light Off" level="0" />
+			</actions>
+		</event>
+		<event id="9" name="Reset Timer from Red Button" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="DeviceStatusCode" name="" operator="=" tag="ON" value="15" />
+				<condition type="StoryState" name="" operator="=" tag="Ended" value="0" />
+			</conditions>
+			<actions>
+				<action type="StoryState" state="Resetting" />
+				<action type="MusicStop" screen="Countdown" channel="0" />
+				<action type="Device" deviceid="14" command="Red Btn Light On" level="0" />
+				<action type="Delay" value="250" />
+				<action type="Device" deviceid="14" command="Red Btn Light Off" level="0" />
+				<action type="Delay" value="250" />
+				<action type="Device" deviceid="14" command="Red Btn Light On" level="0" />
+				<action type="Delay" value="250" />
+				<action type="Device" deviceid="14" command="Red Btn Light Off" level="0" />
+			</actions>
+		</event>
+		<event id="12" name="Music Override" type="Single" mode="All" color="0 0 255 255" gmvisible="true" active="true">
+			<conditions />
+			<actions>
+				<action type="SetMusic" value="arktheme" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+			</actions>
+		</event>
+	</events>
+	<values />
+</story>

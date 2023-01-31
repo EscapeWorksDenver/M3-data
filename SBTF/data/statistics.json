@@ -1,0 +1,165 @@
+{
+  "StoryID": "SBTF",
+  "TotalSessions": 2137,
+  "TotalPlayers": 107,
+  "TotalSuccess": 1408,
+  "SuccessRate": 0.66,
+  "AverageCluesRemaining": 0,
+  "AverageCluesUsed": 10,
+  "AveragePlayers": 1,
+  "AverageScore": 0,
+  "AverageTimeRemaining": 328687,
+  "AverageTimeUsed": 0,
+  "Objectives": {
+    "1": {
+      "ID": 1,
+      "Name": "Flower Math Riddle - 250",
+      "AverageTimeRemaining": 2788493,
+      "AverageCompletionRate": 0.98,
+      "AverageCluesRequired": 0.87,
+      "TotalTime": 5816797968,
+      "TotalCompleted": 2086,
+      "TotalCluesRequired": 1867
+    },
+    "2": {
+      "ID": 2,
+      "Name": "Flower Poem - 439-5768",
+      "AverageTimeRemaining": 2445416,
+      "AverageCompletionRate": 0.85,
+      "AverageCluesRequired": 0.67,
+      "TotalTime": 4440876609,
+      "TotalCompleted": 1816,
+      "TotalCluesRequired": 1429
+    },
+    "3": {
+      "ID": 3,
+      "Name": "Barrel to Bench",
+      "AverageTimeRemaining": 1856046,
+      "AverageCompletionRate": 0.96,
+      "AverageCluesRequired": 0.53,
+      "TotalTime": 3799327684,
+      "TotalCompleted": 2047,
+      "TotalCluesRequired": 1122
+    },
+    "4": {
+      "ID": 4,
+      "Name": "Dartboard/Vent",
+      "AverageTimeRemaining": 1946569,
+      "AverageCompletionRate": 0.96,
+      "AverageCluesRequired": 0.08,
+      "TotalTime": 3990466779,
+      "TotalCompleted": 2050,
+      "TotalCluesRequired": 167
+    },
+    "5": {
+      "ID": 5,
+      "Name": "Gears - 78 Left 28 Right 73 Left",
+      "AverageTimeRemaining": 1223812,
+      "AverageCompletionRate": 0.91,
+      "AverageCluesRequired": 0.6,
+      "TotalTime": 2374196924,
+      "TotalCompleted": 1940,
+      "TotalCluesRequired": 1279
+    },
+    "6": {
+      "ID": 6,
+      "Name": "Drink Menu - 658",
+      "AverageTimeRemaining": 1029392,
+      "AverageCompletionRate": 0.91,
+      "AverageCluesRequired": 0.87,
+      "TotalTime": 1999079594,
+      "TotalCompleted": 1942,
+      "TotalCluesRequired": 1850
+    },
+    "7": {
+      "ID": 7,
+      "Name": "Table Symbols - Ashtray to Flame/Birdcage to Feather/Lucky to Clover/Black Flower to Flower",
+      "AverageTimeRemaining": 674213,
+      "AverageCompletionRate": 0.78,
+      "AverageCluesRequired": 0.74,
+      "TotalTime": 1127958886,
+      "TotalCompleted": 1673,
+      "TotalCluesRequired": 1590
+    },
+    "8": {
+      "ID": 8,
+      "Name": "Secret Door - 4 Buttons (Vent, Cabinet, Register, Safe)",
+      "AverageTimeRemaining": 536592,
+      "AverageCompletionRate": 0.69,
+      "AverageCluesRequired": 0.2,
+      "TotalTime": 789327561,
+      "TotalCompleted": 1471,
+      "TotalCluesRequired": 436
+    },
+    "9": {
+      "ID": 9,
+      "Name": "Boiler Knobs",
+      "AverageTimeRemaining": 437517,
+      "AverageCompletionRate": 0.47,
+      "AverageCluesRequired": 0.28,
+      "TotalTime": 438829735,
+      "TotalCompleted": 1003,
+      "TotalCluesRequired": 592
+    },
+    "10": {
+      "ID": 10,
+      "Name": "Levers - Up Down Down Middle",
+      "AverageTimeRemaining": 427360,
+      "AverageCompletionRate": 0.37,
+      "AverageCluesRequired": 0.19,
+      "TotalTime": 341460731,
+      "TotalCompleted": 799,
+      "TotalCluesRequired": 399
+    },
+    "11": {
+      "ID": 11,
+      "Name": "Welcome!",
+      "AverageTimeRemaining": 3116414,
+      "AverageCompletionRate": 0.97,
+      "AverageCluesRequired": 0.86,
+      "TotalTime": 6463444365,
+      "TotalCompleted": 2074,
+      "TotalCluesRequired": 1848
+    },
+    "12": {
+      "ID": 12,
+      "Name": "Knock Complete - Enter Speakeasy",
+      "AverageTimeRemaining": 2356955,
+      "AverageCompletionRate": 0.32,
+      "AverageCluesRequired": 0.26,
+      "TotalTime": 1628655947,
+      "TotalCompleted": 691,
+      "TotalCluesRequired": 560
+    },
+    "13": {
+      "ID": 13,
+      "Name": "Safe Cipher - 78 + 73 to hand pointing left, 28 to hand pointing right",
+      "AverageTimeRemaining": 1028441,
+      "AverageCompletionRate": 0.28,
+      "AverageCluesRequired": 0.25,
+      "TotalTime": 618093432,
+      "TotalCompleted": 601,
+      "TotalCluesRequired": 535
+    },
+    "14": {
+      "ID": 14,
+      "Name": "Flower Poem - 439-5768 - Secret Knock. Door Opens",
+      "AverageTimeRemaining": 2437094,
+      "AverageCompletionRate": 0.13,
+      "AverageCluesRequired": 0.1,
+      "TotalTime": 658015615,
+      "TotalCompleted": 270,
+      "TotalCluesRequired": 217
+    },
+    "15": {
+      "ID": 15,
+      "Name": "Knocks",
+      "AverageTimeRemaining": 2483157,
+      "AverageCompletionRate": 0.13,
+      "AverageCluesRequired": 0.04,
+      "TotalTime": 670452390,
+      "TotalCompleted": 270,
+      "TotalCluesRequired": 77
+    }
+  }
+}
