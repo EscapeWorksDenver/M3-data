@@ -1,0 +1,608 @@
+<story>
+	<id>CH</id>
+	<name>Casino Heist</name>
+	<description>You and your team are expert criminals. You've done it all. Jewelry heists, bank robberies, art theft... The whole nine yards! It's all lead up to today - the biggest heist you've ever pulled! Today, you hit the Sahara Casino in Las Vegas. You step into the casino and something is off. That's when you put together the pieces. The mastermind leader of the heist has gone rogue. He has already hit the vault and tipped off the police that you are behind it. But - he's not without humor and mercy. He has left behind a series of clues and puzzles to give you a shot at escaping. You have 1 hour to get into the vault, take your safe of the cash and get out.</description>
+	<active>true</active>
+	<type>Standard</type>
+	<color>0 0 0 255</color>
+	<scoring>Time</scoring>
+	<timebonus>0</timebonus>
+	<duration>60</duration>
+	<players>8</players>
+	<difficulty>1</difficulty>
+	<teamname>Heisters</teamname>
+	<chime ontext="true" onimage="true" onaudio="false" onvideo="false">stories/CH/CH-ButtonPress.mp3</chime>
+	<audioducking>false</audioducking>
+	<externalid />
+	<marquee>stories/CH/m3-marquee.jpg</marquee>
+	<poster>stories/CH/m3-poster.jpg</poster>
+	<styleinfo>
+		<base>standard</base>
+		<basecolor>0 0 0 255</basecolor>
+		<orientation>1</orientation>
+		<background>stories/CH/CH_Roulette_2_LBnlFgm.jpg</background>
+		<backgroundlinkedtotimer>true</backgroundlinkedtotimer>
+		<clueicon>images/clue.png</clueicon>
+		<clueusedicon>images/clue-used.png</clueusedicon>
+		<timer hidewhenidle="false" hidewhenzero="false" font="" fontbold="false" fontitalic="false" fontshadow="false" left="0" top="0" size="480" color="255 255 255 255" override="false" visible="true" />
+		<messages font="" fontbold="false" fontitalic="false" fontshadow="false" left="0" top="0" size="40" color="255 255 255 255" override="false" visible="true" />
+		<clues left="0" top="0" override="false" visible="true" />
+		<customcss />
+		<customhtml />
+	</styleinfo>
+	<prologue>false</prologue>
+	<epilogue>false</epilogue>
+	<sound-levels>
+		<level id="Master" base="1" level="1" mute="false" />
+		<level id="Chimes" base="1" level="1" mute="false" />
+		<level id="Sounds" base="1" level="1" mute="false" />
+		<level id="Videos" base="1" level="1" mute="false" />
+		<level id="Music" base="1" level="1" mute="false" />
+		<level id="Backgrounds" base="1" level="1" mute="false" />
+	</sound-levels>
+	<clues total="0">
+		<penalty>None</penalty>
+		<penaltyvalue>0</penaltyvalue>
+		<bonus>None</bonus>
+		<bonusvalue>0</bonusvalue>
+		<duration>120</duration>
+	</clues>
+	<rooms />
+	<languages>
+		<language id="0">English</language>
+		<language id="1" />
+		<language id="2" />
+		<language id="3" />
+		<language id="4" />
+	</languages>
+	<music>
+		<track name="ambient sound" source="stories/CH/Casino_Slots_Ambient_SOUND_-_Crowded_Room_-_Sirens_-_People.mp3" volume="1" />
+		<track name="Fail sound" source="stories/CH/CH_Lose-_Jailhouse_Rock_Modified.mp3" volume="1" />
+		<track name="Viva Las Vegas" source="stories/CH/casinoheistvivalasvegas (1).mp3" volume="1" />
+	</music>
+	<requiredscreens />
+	<reset />
+	<devices>
+		<device id="18" type="MQTT" style="Device" channel="0" name="Red Button Light CH" topic="" visible="true" commands="true">
+			<description>Red Light Casino Heist</description>
+			<command name="Red BTN Light On" text="/dingtian/relay8833/in/r8" code="ON" />
+			<command name="Red Btn Light Off" text="/dingtian/relay8833/in/r8" code="OFF" />
+		</device>
+		<device id="19" type="MQTT" style="Device" channel="0" name="Red Start Button CH" topic="/dingtian/relay8833/out/i8" visible="true" commands="true">
+			<description>Red Start Button Casino Heist</description>
+		</device>
+	</devices>
+	<objectives>
+		<objective id="1" rank="Primary" name="Briefcase ((White- 352, Orange- 267))" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="59" name="Lights" type="Text" source="" score="0" weight="1">
+					<text>One latch to the left, one latch to the right...One light is orange, One light is white!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="60" name="Slot Machine" type="Text" source="" score="0" weight="1">
+					<text>Focus on the lights above the slot machine, count the flashes for your briefcase code!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="61" name="In case of fools" type="Text" source="" score="0" weight="1">
+					<text>Focus on the lights above the slot machine, count the flashes for your briefcase code! White: 3 _ __ Orange 2 _ _ !</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="68" name="Baby Hint" type="Text" source="" score="0" weight="1">
+					<text>Orange and white...</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="2" rank="Primary" name="Door Code  - 5479 (Gaming Salon, Main Casino, Alexandria Tower, East Garage)" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="46" name="Clock" type="Text" source="" score="0" weight="1">
+					<text>Take a look at that clock on the wall! What time should the security be patrolling the casino floor?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="47" name="Security" type="Text" source="" score="0" weight="1">
+					<text>Focus on the Vault Door! The security here is very punctual - where are guards supposed to be patrolling right now?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="48" name="Map" type="Text" source="" score="0" weight="1">
+					<text>Each part of the casino has a number attached to it! Use the map and the security schedule to find the 4 locations (for a 4 digit code)!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="49" name="Dice" type="Text" source="" score="0" weight="1">
+					<text>Remember, a die only has 6 sides; when you roll a set, you add them together!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="50" name="Locations" type="Text" source="" score="0" weight="1">
+					<text>Gaming Salon, Main Casino, Alexandria Tower, East Garage!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="51" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>You're close here! Work from left to right on the security schedule for the correct order of locations. Be sure to add die together if it's in pairs.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="54" name="Order" type="Text" source="" score="0" weight="1">
+					<text>Right numbers - wrong order! Follow the security schedule from left to right for the correct order of locations.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="55" name="Time Help" type="Text" source="" score="0" weight="1">
+					<text>Remember, it's 10:30 on the casino floor right now! You'll only need the 4 locations that have security guards posted during that time.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="11" rank="Opportunity" name="Slot Machine - Play Cash Change Spin Bet Play Cash" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="62" name="Better Late Than..." type="Text" source="" score="0" weight="1">
+					<text>PULL THE LEVER!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="63" name="Explanation" type="Text" source="" score="0" weight="1">
+					<text>Take a look at that note your heist master left you... The last word of each sentence will help you play the slot machine effectively.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="64" name="Subtle" type="Text" source="" score="0" weight="1">
+					<text>Seems like your heist master left a note to get the LAST WORDS... Could he have found a way to game the slot machine?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="65" name="Extra Help" type="Text" source="" score="0" weight="1">
+					<text>Your heist-master left you a large note in the briefcase. Note the last word on each sentence and push the slot machine buttons in that order!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="4" rank="Primary" name="Heart - 5901" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="8" name="Ticket Stamp" type="Text" source="" score="0" weight="1">
+					<text>The Sahara Casino is forever stamped in my HEART... my favorite place off Las Vegas Blvd...</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="43" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>The Sahara Casino is my all time favorite stop on the strip... I hope I can remember the address!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="67" name="Assist 2" type="Text" source="" score="0" weight="1">
+					<text>Focus on the stamp located on the backside of the ticket.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="5" rank="Primary" name="Roulette Table ((White=13, Red=Black Diamond, Yellow=17, Blue = 1st 12))" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="9" name="Dogs" type="Text" source="" score="0" weight="1">
+					<text>When the chips are down, you can always look to your dogs!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="10" name="Centered" type="Text" source="" score="0" weight="1">
+					<text>Make sure you put the chip stacks in the center of their spots, even if they aren't centered on the painting.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="11" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>Try to match the picture with your table - as best you can!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="69" name="Haiku" type="Text" source="" score="0" weight="1">
+					<text>A clue haiku; When the chips are down / You should be drawn to your dogs / tacky, yet helpful!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="6" rank="Primary" name="Joker" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="12" name="Joker Card" type="Text" source="" score="0" weight="1">
+					<text>This heist ain't no joke...But it does make me feel like a JOKER...</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="13" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>JOKER is 5 letters long!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="7" rank="Primary" name="Dispatch Code - 425406" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="14" name="YOU connect them" type="Text" source="" score="0" weight="1">
+					<text>The key with these cords is YOU connecting them!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="15" name="CLUB Assist" type="Text" source="" score="0" weight="1">
+					<text>Right code, wrong keypad! She said CLUB level...(it's a bit of a REACH!)</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="16" name="Keypad Assist" type="Text" source="" score="0" weight="1">
+					<text>Keep in mind that keypad is inverted! Use the 5 button as your guide - it has a bump on it!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="18" name="Dispatch Code" type="Text" source="" score="0" weight="1">
+					<text>The police are catching up to you. Hurry into the CLUB! Is there a way to use that dispatch code...?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="20" name="Dispatch Audio (if it doesn't go off)" type="Audio" source="stories/CH/Police Audio Production Sept 2019.mp3" score="0" weight="1">
+					<text />
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="32" name="metal end" type="Text" source="" score="0" weight="1">
+					<text>Plug both cables into both outlets - then hold the metal end in your hands! (The key is YOU connecting...)</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="34" name="Cables - Matt" type="Text" source="" score="0" weight="1">
+					<text>The key is YOU connecting...</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="35" name="In case of fools, use this:" type="Text" source="" score="0" weight="1">
+					<text>You're attempting to carry an electrical charge across the room. Be sure to put the cables into the jacks in the walls, and be sure to hold hands to carry that charge...</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="56" name="Loose Connection" type="Text" source="" score="0" weight="1">
+					<text>Make sure the cords are plugged into the wall jacks (all of the way), and you're holding onto the metal ends of the cords!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="57" name="Code Assist" type="Text" source="" score="0" weight="1">
+					<text>You'll need the full dispatch code here (all 6 digits), plus # to submit!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="66" name="Find the cubby" type="Text" source="" score="0" weight="1">
+					<text>Do you see the silver door in the wall with the CLUB symbol? What can you feel when you *reach* through?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="8" rank="Primary" name="How to Play Blackjack - R B Y G W" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="17" name="Final Cards" type="Text" source="" score="0" weight="1">
+					<text>Funny thing about Blackjack; card counters know the final card often colors the hand.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="19" name="Ace is 1" type="Text" source="" score="0" weight="1">
+					<text>Look for five cards dealt, Ace through five! Remember, Ace = 1... And the ace is placed on red!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="26" name="Blackjack Video" type="Video" source="stories/CH/CH Loop Video.mp4" score="0" weight="1">
+					<text />
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="27" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>Keep in mind, you only need to push each button once!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="30" name="NO NO" type="Text" source="" score="0" weight="1">
+					<text>No cards, chips, or paper in that slot please!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="36" name="NO NO Head" type="Text" source="" score="0" weight="1">
+					<text>No heads in that door, please!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="37" name="Card Slot Explanation" type="Text" source="" score="0" weight="1">
+					<text>Later in the game you will get a clear plastic piece that will slide into that card slot that's making noise, you won't need to put any other types of cards into it.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="52" name="HELP" type="Text" source="" score="0" weight="1">
+					<text>If Green gets the 4 card, that means Green is the Fourth button!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="9" rank="Primary" name="Boxing Date - 050220 ((Other variations exist as well))" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="21" name="Keypad Assist" type="Text" source="" score="0" weight="1">
+					<text>People have been waiting for that rematch for five years! I've got a few SPADE's bet on it, myself...</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="22" name="Assist" type="Text" source="" score="0" weight="1">
+					<text>Five years to the day... at the Spade Arena! MM/DD/YY</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="25" name="Boxing Audio (if it does not play for them)" type="Audio" source="stories/CH/Boxing Button Audio Production Sept 2019.mp3" score="0" weight="1">
+					<text />
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="40" name="Repeat Message" type="Text" source="" score="0" weight="1">
+					<text>Push those buttons in the correct order again to hear that message once more!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="53" name="HELP" type="Text" source="" score="0" weight="1">
+					<text>That poster is the original fight! When did the announcer say the rematch was happening?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+		<objective id="10" rank="Primary" name="Diamond Key" event="" score="0">
+			<narrative />
+			<clues>
+				<clue id="23" name="Cards" type="Text" source="" score="0" weight="1">
+					<text>One puzzle left before you can get your hands on that diamond! What haven't you used yet? There has to be a way to use the odd ones out...</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="24" name="Card Assist" type="Text" source="" score="0" weight="1">
+					<text>Four hotel key cards don't fit that puzzle. There's gotta be somewhere on the casino floor where you can scan those cards! Does that completed image look familiar?</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="39" name="Alarm" type="Text" source="" score="0" weight="1">
+					<text>That alarm is alerting all the cops in Vegas!! Turn that thing off and keep it off!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="44" name="Lasers" type="Text" source="" score="0" weight="1">
+					<text>Those lasers in the vault are just for show! Focus on that key card puzzle to finish the game!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="45" name="Green Light" type="Text" source="" score="0" weight="1">
+					<text>Make sure the green light comes on when you scan each correct card!</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+				<clue id="58" name="When they just scan every card" type="Text" source="" score="0" weight="1">
+					<text>Only scanning the *correct* cards will drop that last key!! Which cards seem to be the odd ones out? Form the full photo to move forward.</text>
+					<textalt1 />
+					<textalt2 />
+					<textalt3 />
+					<textalt4 />
+				</clue>
+			</clues>
+		</objective>
+	</objectives>
+	<events>
+		<event id="2" name="Failed" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Ended" value="0" />
+				<condition type="Success" name="" operator="=" tag="false" value="0" />
+			</conditions>
+			<actions>
+				<action type="SetBackground" screen="Countdown" channel="0" source="stories/CH/fail.jpg" />
+				<action type="MusicStop" screen="Countdown" channel="0" />
+				<action type="SendMessage" format="Text" screen="Countdown" channel="0" duration="60000" source="0" volume="1" loop="false" alert="false">You got caught and you're going to jail...</action>
+				<action type="SetMusic" value="Fail sound" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+				<action type="Delay" value="40000" />
+				<action type="MusicStop" screen="Countdown" channel="0" />
+			</actions>
+		</event>
+		<event id="3" name="Start Game - Running" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Running" value="0" />
+			</conditions>
+			<actions>
+				<action type="SetMusic" value="ambient sound" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+				<action type="Device" deviceid="18" command="Red BTN Light On" level="0" />
+			</actions>
+		</event>
+		<event id="4" name="Success" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Ended" value="0" />
+				<condition type="Success" name="" operator="=" tag="true" value="0" />
+			</conditions>
+			<actions>
+				<action type="SetBackground" screen="Countdown" channel="0" source="stories/CH/bigdiamondonblack.jpg" />
+				<action type="SendMessage" format="Text" screen="Countdown" channel="0" duration="60000" source="0" volume="1" loop="false" alert="false">You escape with the diamond!</action>
+				<action type="SetMusic" value="" screen="Countdown" channel="0" volume="1" />
+				<action type="Delay" value="45000" />
+				<action type="MusicStop" screen="Countdown" channel="0" />
+			</actions>
+		</event>
+		<event id="5" name="Play Success music" type="Single" mode="All" color="0 0 255 255" gmvisible="true" active="false">
+			<conditions />
+			<actions>
+				<action type="MusicStop" screen="Countdown" channel="0" />
+				<action type="SetMusic" value="Viva Las Vegas" screen="Countdown" channel="0" volume="1" />
+				<action type="MusicPlay" screen="Countdown" channel="0" />
+				<action type="Delay" value="45000" />
+				<action type="MusicStop" screen="Countdown" channel="0" />
+			</actions>
+		</event>
+		<event id="6" name="Start Game From Button" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="DeviceStatusCode" name="" operator="=" tag="ON" value="19" />
+				<condition type="StoryState" name="" operator="=" tag="Idle" value="0" />
+			</conditions>
+			<actions>
+				<action type="StoryState" state="Running" />
+				<action type="Device" deviceid="18" command="Red BTN Light On" level="0" />
+				<action type="Delay" value="1000" />
+				<action type="Device" deviceid="18" command="Red Btn Light Off" level="0" />
+				<action type="Delay" value="1000" />
+				<action type="Device" deviceid="18" command="Red BTN Light On" level="0" />
+			</actions>
+		</event>
+		<event id="7" name="Red Button Off Game Not Running" type="Recurring" mode="Any" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="StoryState" name="" operator="=" tag="Ended" value="0" />
+				<condition type="StoryState" name="" operator="=" tag="Resetting" value="0" />
+				<condition type="StoryState" name="" operator="=" tag="Offline" value="0" />
+				<condition type="StoryState" name="" operator="=" tag="Idle" value="0" />
+			</conditions>
+			<actions>
+				<action type="Device" deviceid="18" command="Red Btn Light Off" level="0" />
+			</actions>
+		</event>
+		<event id="8" name="Reset Timer on Button Press" type="Single" mode="All" color="0 0 0 255" gmvisible="false" active="true">
+			<conditions>
+				<condition type="DeviceStatusCode" name="" operator="=" tag="ON" value="19" />
+				<condition type="StoryState" name="" operator="=" tag="Ended" value="0" />
+			</conditions>
+			<actions>
+				<action type="StoryState" state="Resetting" />
+				<action type="Device" deviceid="18" command="Red BTN Light On" level="0" />
+				<action type="Delay" value="250" />
+				<action type="Device" deviceid="18" command="Red Btn Light Off" level="0" />
+				<action type="Delay" value="250" />
+				<action type="Device" deviceid="18" command="Red BTN Light On" level="0" />
+				<action type="Delay" value="250" />
+				<action type="Device" deviceid="18" command="Red Btn Light Off" level="0" />
+				<action type="Delay" value="250" />
+				<action type="Device" deviceid="18" command="Red BTN Light On" level="0" />
+				<action type="Delay" value="250" />
+				<action type="Device" deviceid="18" command="Red Btn Light Off" level="0" />
+			</actions>
+		</event>
+	</events>
+	<values />
+</story>

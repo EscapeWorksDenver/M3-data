@@ -1,0 +1,125 @@
+{
+  "StoryID": "CH",
+  "TotalSessions": 2801,
+  "TotalPlayers": 274,
+  "TotalSuccess": 1538,
+  "SuccessRate": 0.55,
+  "AverageCluesRemaining": 0,
+  "AverageCluesUsed": 9,
+  "AveragePlayers": 1,
+  "AverageScore": 0,
+  "AverageTimeRemaining": 303884,
+  "AverageTimeUsed": 0,
+  "Objectives": {
+    "1": {
+      "ID": 1,
+      "Name": "Briefcase",
+      "AverageTimeRemaining": 3021026,
+      "AverageCompletionRate": 0.97,
+      "AverageCluesRequired": 0.81,
+      "TotalTime": 8247403349,
+      "TotalCompleted": 2730,
+      "TotalCluesRequired": 2276
+    },
+    "2": {
+      "ID": 2,
+      "Name": "Door Code - 4998",
+      "AverageTimeRemaining": 1436460,
+      "AverageCompletionRate": 0.76,
+      "AverageCluesRequired": 0.53,
+      "TotalTime": 3048169913,
+      "TotalCompleted": 2122,
+      "TotalCluesRequired": 1476
+    },
+    "3": {
+      "ID": 3,
+      "Name": "Slot Machine - Play Cash Change Spin Bet Play Cash",
+      "AverageTimeRemaining": 2500316,
+      "AverageCompletionRate": 0.67,
+      "AverageCluesRequired": 0.55,
+      "TotalTime": 4703095553,
+      "TotalCompleted": 1881,
+      "TotalCluesRequired": 1540
+    },
+    "4": {
+      "ID": 4,
+      "Name": "Heart - 5901",
+      "AverageTimeRemaining": 2329223,
+      "AverageCompletionRate": 0.97,
+      "AverageCluesRequired": 0.38,
+      "TotalTime": 6349463017,
+      "TotalCompleted": 2726,
+      "TotalCluesRequired": 1067
+    },
+    "5": {
+      "ID": 5,
+      "Name": "Roulette Table",
+      "AverageTimeRemaining": 1861552,
+      "AverageCompletionRate": 0.97,
+      "AverageCluesRequired": 0.74,
+      "TotalTime": 5061559900,
+      "TotalCompleted": 2719,
+      "TotalCluesRequired": 2060
+    },
+    "6": {
+      "ID": 6,
+      "Name": "Joker",
+      "AverageTimeRemaining": 1666293,
+      "AverageCompletionRate": 0.97,
+      "AverageCluesRequired": 0.27,
+      "TotalTime": 4523987449,
+      "TotalCompleted": 2715,
+      "TotalCluesRequired": 751
+    },
+    "7": {
+      "ID": 7,
+      "Name": "Dispatch Code - 425406",
+      "AverageTimeRemaining": 1167455,
+      "AverageCompletionRate": 0.95,
+      "AverageCluesRequired": 0.73,
+      "TotalTime": 3096092153,
+      "TotalCompleted": 2652,
+      "TotalCluesRequired": 2046
+    },
+    "8": {
+      "ID": 8,
+      "Name": "How to Play Blackjack - R B Y G W",
+      "AverageTimeRemaining": 849432,
+      "AverageCompletionRate": 0.88,
+      "AverageCluesRequired": 0.95,
+      "TotalTime": 2089604179,
+      "TotalCompleted": 2460,
+      "TotalCluesRequired": 2667
+    },
+    "9": {
+      "ID": 9,
+      "Name": "Boxing Date - 050220",
+      "AverageTimeRemaining": 749795,
+      "AverageCompletionRate": 0.78,
+      "AverageCluesRequired": 0.27,
+      "TotalTime": 1645051625,
+      "TotalCompleted": 2194,
+      "TotalCluesRequired": 763
+    },
+    "10": {
+      "ID": 10,
+      "Name": "Diamond Key",
+      "AverageTimeRemaining": 451989,
+      "AverageCompletionRate": 0.18,
+      "AverageCluesRequired": 0.5,
+      "TotalTime": 222831034,
+      "TotalCompleted": 493,
+      "TotalCluesRequired": 1406
+    },
+    "11": {
+      "ID": 11,
+      "Name": "Slot Machine",
+      "AverageTimeRemaining": 2818554,
+      "AverageCompletionRate": 0.3,
+      "AverageCluesRequired": 0.15,
+      "TotalTime": 2333763079,
+      "TotalCompleted": 828,
+      "TotalCluesRequired": 408
+    }
+  }
+}
